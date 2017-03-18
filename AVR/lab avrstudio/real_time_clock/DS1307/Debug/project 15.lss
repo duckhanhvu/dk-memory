@@ -1,0 +1,1877 @@
+
+project 15.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000918  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000016  00800060  00000918  000009ac  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000000c  00800076  00800076  000009c2  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  000009c4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000090  00000000  00000000  00001090  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000040  00000000  00000000  00001120  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 00000498  00000000  00000000  00001160  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00000ca7  00000000  00000000  000015f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 00000399  00000000  00000000  0000229f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00000f4c  00000000  00000000  00002638  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000380  00000000  00000000  00003584  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    000004e3  00000000  00000000  00003904  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    00000648  00000000  00000000  00003de7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_pubtypes 0000006c  00000000  00000000  0000442f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   8:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+   c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  10:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  14:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  18:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  1c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  20:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  24:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  28:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  2c:	0c 94 62 03 	jmp	0x6c4	; 0x6c4 <__vector_11>
+  30:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  34:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  38:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  3c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  40:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  44:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  48:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  4c:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+  50:	0c 94 47 00 	jmp	0x8e	; 0x8e <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_copy_data>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	e8 e1       	ldi	r30, 0x18	; 24
+  68:	f9 e0       	ldi	r31, 0x09	; 9
+  6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
+  6c:	05 90       	lpm	r0, Z+
+  6e:	0d 92       	st	X+, r0
+  70:	a6 37       	cpi	r26, 0x76	; 118
+  72:	b1 07       	cpc	r27, r17
+  74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
+
+00000076 <__do_clear_bss>:
+  76:	10 e0       	ldi	r17, 0x00	; 0
+  78:	a6 e7       	ldi	r26, 0x76	; 118
+  7a:	b0 e0       	ldi	r27, 0x00	; 0
+  7c:	01 c0       	rjmp	.+2      	; 0x80 <.do_clear_bss_start>
+
+0000007e <.do_clear_bss_loop>:
+  7e:	1d 92       	st	X+, r1
+
+00000080 <.do_clear_bss_start>:
+  80:	a2 38       	cpi	r26, 0x82	; 130
+  82:	b1 07       	cpc	r27, r17
+  84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
+  86:	0e 94 30 03 	call	0x660	; 0x660 <main>
+  8a:	0c 94 8a 04 	jmp	0x914	; 0x914 <_exit>
+
+0000008e <__bad_interrupt>:
+  8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000092 <twi_init>:
+
+/*Function definations*/
+
+void twi_init()
+{
+TWSR=0x00;
+  92:	11 b8       	out	0x01, r1	; 1
+TWBR=0x02;
+  94:	82 e0       	ldi	r24, 0x02	; 2
+  96:	80 b9       	out	0x00, r24	; 0
+}
+  98:	08 95       	ret
+
+0000009a <twi_send_start>:
+
+unsigned char twi_send_start()
+{
+TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN); 	
+  9a:	84 ea       	ldi	r24, 0xA4	; 164
+  9c:	86 bf       	out	0x36, r24	; 54
+while (!(TWCR & (1<<TWINT)))
+  9e:	06 b6       	in	r0, 0x36	; 54
+  a0:	07 fe       	sbrs	r0, 7
+  a2:	fd cf       	rjmp	.-6      	; 0x9e <twi_send_start+0x4>
+	;
+return (TWSR & 0xf8);
+  a4:	81 b1       	in	r24, 0x01	; 1
+while((TWSR & 0xf8) != 0x08)
+	;
+}
+  a6:	88 7f       	andi	r24, 0xF8	; 248
+  a8:	08 95       	ret
+
+000000aa <twi_send_repeated_start>:
+
+unsigned char twi_send_repeated_start(void)
+{
+TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN); 		
+  aa:	84 ea       	ldi	r24, 0xA4	; 164
+  ac:	86 bf       	out	0x36, r24	; 54
+while (!(TWCR & (1<<TWINT)))
+  ae:	06 b6       	in	r0, 0x36	; 54
+  b0:	07 fe       	sbrs	r0, 7
+  b2:	fd cf       	rjmp	.-6      	; 0xae <twi_send_repeated_start+0x4>
+	;   		
+return (TWSR & 0xf8);
+  b4:	81 b1       	in	r24, 0x01	; 1
+while((TWSR & 0xf8) != 0x10)
+	;   		  								
+}
+  b6:	88 7f       	andi	r24, 0xF8	; 248
+  b8:	08 95       	ret
+
+000000ba <twi_send_address_rw>:
+
+unsigned char twi_send_address_rw(unsigned char address_rw)
+{
+TWDR = address_rw; 
+  ba:	83 b9       	out	0x03, r24	; 3
+TWCR = (1<<TWINT)|(1<<TWEN);	   
+  bc:	84 e8       	ldi	r24, 0x84	; 132
+  be:	86 bf       	out	0x36, r24	; 54
+while (!(TWCR & (1<<TWINT)))
+  c0:	06 b6       	in	r0, 0x36	; 54
+  c2:	07 fe       	sbrs	r0, 7
+  c4:	fd cf       	rjmp	.-6      	; 0xc0 <twi_send_address_rw+0x6>
+	;
+return (TWSR & 0xf8);
+  c6:	81 b1       	in	r24, 0x01	; 1
+while(((TWSR & 0xf8) != 0x18) || ((TWSR & 0xf8) != 0x40))
+	;		   
+}
+  c8:	88 7f       	andi	r24, 0xF8	; 248
+  ca:	08 95       	ret
+
+000000cc <twi_master_send_data>:
+
+unsigned char twi_master_send_data(unsigned char data)
+{
+TWDR = data; 
+  cc:	83 b9       	out	0x03, r24	; 3
+TWCR = (1<<TWINT) |(1<<TWEN);	   
+  ce:	84 e8       	ldi	r24, 0x84	; 132
+  d0:	86 bf       	out	0x36, r24	; 54
+while (!(TWCR & (1<<TWINT)))
+  d2:	06 b6       	in	r0, 0x36	; 54
+  d4:	07 fe       	sbrs	r0, 7
+  d6:	fd cf       	rjmp	.-6      	; 0xd2 <twi_master_send_data+0x6>
+;	   
+return (TWSR & 0xf8);
+  d8:	81 b1       	in	r24, 0x01	; 1
+while((TWSR & 0xf8) != 0x28)
+	;   		 		   					   
+}
+  da:	88 7f       	andi	r24, 0xF8	; 248
+  dc:	08 95       	ret
+
+000000de <twi_master_send_string>:
+
+unsigned char twi_master_send_string(unsigned char *string)
+{
+  de:	e8 2f       	mov	r30, r24
+  e0:	f9 2f       	mov	r31, r25
+while (*string)
+{
+	TWDR = *string++; 
+	TWCR = (1<<TWINT) |(1<<TWEN);	   
+  e2:	94 e8       	ldi	r25, 0x84	; 132
+	;   		 		   					   
+}
+
+unsigned char twi_master_send_string(unsigned char *string)
+{
+while (*string)
+  e4:	09 c0       	rjmp	.+18     	; 0xf8 <twi_master_send_string+0x1a>
+{
+	TWDR = *string++; 
+  e6:	83 b9       	out	0x03, r24	; 3
+	TWCR = (1<<TWINT) |(1<<TWEN);	   
+  e8:	96 bf       	out	0x36, r25	; 54
+	while (!(TWCR & (1<<TWINT)))
+  ea:	06 b6       	in	r0, 0x36	; 54
+  ec:	07 fe       	sbrs	r0, 7
+  ee:	fd cf       	rjmp	.-6      	; 0xea <twi_master_send_string+0xc>
+	;	   
+	while((TWSR & 0xf8) != 0x28)
+  f0:	81 b1       	in	r24, 0x01	; 1
+  f2:	88 7f       	andi	r24, 0xF8	; 248
+  f4:	88 32       	cpi	r24, 0x28	; 40
+  f6:	e1 f7       	brne	.-8      	; 0xf0 <twi_master_send_string+0x12>
+	;   		 		   					   
+}
+
+unsigned char twi_master_send_string(unsigned char *string)
+{
+while (*string)
+  f8:	81 91       	ld	r24, Z+
+  fa:	88 23       	and	r24, r24
+  fc:	a1 f7       	brne	.-24     	; 0xe6 <twi_master_send_string+0x8>
+	while (!(TWCR & (1<<TWINT)))
+	;	   
+	while((TWSR & 0xf8) != 0x28)
+		;   		 		   					   
+}
+return (TWSR & 0xf8);
+  fe:	81 b1       	in	r24, 0x01	; 1
+}
+ 100:	88 7f       	andi	r24, 0xF8	; 248
+ 102:	08 95       	ret
+
+00000104 <twi_master_receive_data>:
+
+unsigned char twi_master_receive_data()
+{
+TWCR =(1<<TWEA)|(1<<TWINT)|(1<<TWEN);
+ 104:	84 ec       	ldi	r24, 0xC4	; 196
+ 106:	86 bf       	out	0x36, r24	; 54
+while (!(TWCR & (1<<TWINT)))
+ 108:	06 b6       	in	r0, 0x36	; 54
+ 10a:	07 fe       	sbrs	r0, 7
+ 10c:	fd cf       	rjmp	.-6      	; 0x108 <twi_master_receive_data+0x4>
+	;	   	   
+return(TWDR);
+ 10e:	83 b1       	in	r24, 0x03	; 3
+while((TWSR & 0xf8) != 0x50)
+	; 
+}
+ 110:	08 95       	ret
+
+00000112 <twi_master_receive_last_data>:
+*(string+number_of_bytes)=0;
+}
+
+unsigned char twi_master_receive_last_data()
+{
+TWCR =(1<<TWINT)|(1<<TWEN);
+ 112:	84 e8       	ldi	r24, 0x84	; 132
+ 114:	86 bf       	out	0x36, r24	; 54
+while (!(TWCR & (1<<TWINT)))
+ 116:	06 b6       	in	r0, 0x36	; 54
+ 118:	07 fe       	sbrs	r0, 7
+ 11a:	fd cf       	rjmp	.-6      	; 0x116 <twi_master_receive_last_data+0x4>
+	;	   	   
+return(TWDR);
+ 11c:	83 b1       	in	r24, 0x03	; 3
+while((TWSR & 0xf8) != 0x58)
+	; 
+}
+ 11e:	08 95       	ret
+
+00000120 <twi_master_receive_string>:
+while((TWSR & 0xf8) != 0x50)
+	; 
+}
+
+unsigned char *twi_master_receive_string(unsigned char number_of_bytes,unsigned char *string)
+{
+ 120:	1f 93       	push	r17
+ 122:	cf 93       	push	r28
+ 124:	df 93       	push	r29
+ 126:	18 2f       	mov	r17, r24
+ 128:	eb 01       	movw	r28, r22
+for(unsigned char i=0;i<number_of_bytes;i++)
+ 12a:	88 23       	and	r24, r24
+ 12c:	81 f0       	breq	.+32     	; 0x14e <twi_master_receive_string+0x2e>
+ 12e:	fb 01       	movw	r30, r22
+ 130:	90 e0       	ldi	r25, 0x00	; 0
+{
+	TWCR =(1<<TWEA)|(1<<TWINT)|(1<<TWEN);
+ 132:	24 ec       	ldi	r18, 0xC4	; 196
+ 134:	26 bf       	out	0x36, r18	; 54
+	while (!(TWCR & (1<<TWINT)))
+ 136:	06 b6       	in	r0, 0x36	; 54
+ 138:	07 fe       	sbrs	r0, 7
+ 13a:	fd cf       	rjmp	.-6      	; 0x136 <twi_master_receive_string+0x16>
+		;	   	   
+	*(string+i)=TWDR;
+ 13c:	83 b1       	in	r24, 0x03	; 3
+ 13e:	81 93       	st	Z+, r24
+	while((TWSR & 0xf8) != 0x50)
+ 140:	81 b1       	in	r24, 0x01	; 1
+ 142:	88 7f       	andi	r24, 0xF8	; 248
+ 144:	80 35       	cpi	r24, 0x50	; 80
+ 146:	e1 f7       	brne	.-8      	; 0x140 <twi_master_receive_string+0x20>
+	; 
+}
+
+unsigned char *twi_master_receive_string(unsigned char number_of_bytes,unsigned char *string)
+{
+for(unsigned char i=0;i<number_of_bytes;i++)
+ 148:	9f 5f       	subi	r25, 0xFF	; 255
+ 14a:	91 17       	cp	r25, r17
+ 14c:	98 f3       	brcs	.-26     	; 0x134 <twi_master_receive_string+0x14>
+		;	   	   
+	*(string+i)=TWDR;
+	while((TWSR & 0xf8) != 0x50)
+		; 
+}
+*(string+number_of_bytes)=twi_master_receive_last_data();
+ 14e:	0e 94 89 00 	call	0x112	; 0x112 <twi_master_receive_last_data>
+*(string+number_of_bytes)=0;
+ 152:	c1 0f       	add	r28, r17
+ 154:	d1 1d       	adc	r29, r1
+ 156:	18 82       	st	Y, r1
+}
+ 158:	df 91       	pop	r29
+ 15a:	cf 91       	pop	r28
+ 15c:	1f 91       	pop	r17
+ 15e:	08 95       	ret
+
+00000160 <twi_send_stop>:
+	; 
+}
+
+void twi_send_stop()
+{
+TWCR =  (1<<TWINT)|(1<<TWEN)|(1<<TWSTO);
+ 160:	84 e9       	ldi	r24, 0x94	; 148
+ 162:	86 bf       	out	0x36, r24	; 54
+while ((TWCR & (1<<TWSTO)))
+ 164:	06 b6       	in	r0, 0x36	; 54
+ 166:	04 fc       	sbrc	r0, 4
+ 168:	fd cf       	rjmp	.-6      	; 0x164 <twi_send_stop+0x4>
+	;  	 
+} 					                        
+ 16a:	08 95       	ret
+
+0000016c <ds1307_read_second>:
+}
+
+unsigned char ds1307_read_second()
+{
+unsigned char twi_status;
+twi_send_start();
+ 16c:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 170:	80 ed       	ldi	r24, 0xD0	; 208
+ 172:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x00);
+ 176:	80 e0       	ldi	r24, 0x00	; 0
+ 178:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_repeated_start();
+ 17c:	0e 94 55 00 	call	0xaa	; 0xaa <twi_send_repeated_start>
+twi_status=twi_send_address_rw(0xd1);
+ 180:	81 ed       	ldi	r24, 0xD1	; 209
+ 182:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_receive_last_data();
+ 186:	0e 94 89 00 	call	0x112	; 0x112 <twi_master_receive_last_data>
+return twi_status;
+twi_send_stop();
+}
+ 18a:	08 95       	ret
+
+0000018c <ds1307_read_minute>:
+
+unsigned char ds1307_read_minute()
+{
+unsigned char twi_status;
+twi_send_start();
+ 18c:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 190:	80 ed       	ldi	r24, 0xD0	; 208
+ 192:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x01);
+ 196:	81 e0       	ldi	r24, 0x01	; 1
+ 198:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_repeated_start();
+ 19c:	0e 94 55 00 	call	0xaa	; 0xaa <twi_send_repeated_start>
+twi_status=twi_send_address_rw(0xd1);
+ 1a0:	81 ed       	ldi	r24, 0xD1	; 209
+ 1a2:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_receive_last_data();
+ 1a6:	0e 94 89 00 	call	0x112	; 0x112 <twi_master_receive_last_data>
+return twi_status;
+twi_send_stop();
+}
+ 1aa:	08 95       	ret
+
+000001ac <ds1307_read_hour>:
+
+unsigned char ds1307_read_hour()
+{
+unsigned char twi_status;
+twi_send_start();
+ 1ac:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 1b0:	80 ed       	ldi	r24, 0xD0	; 208
+ 1b2:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x02);
+ 1b6:	82 e0       	ldi	r24, 0x02	; 2
+ 1b8:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_repeated_start();
+ 1bc:	0e 94 55 00 	call	0xaa	; 0xaa <twi_send_repeated_start>
+twi_status=twi_send_address_rw(0xd1);
+ 1c0:	81 ed       	ldi	r24, 0xD1	; 209
+ 1c2:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_receive_last_data();
+ 1c6:	0e 94 89 00 	call	0x112	; 0x112 <twi_master_receive_last_data>
+return twi_status;
+twi_send_stop();
+}
+ 1ca:	08 95       	ret
+
+000001cc <ds1307_read_day>:
+
+unsigned char ds1307_read_day()
+{
+unsigned char twi_status;
+twi_send_start();
+ 1cc:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 1d0:	80 ed       	ldi	r24, 0xD0	; 208
+ 1d2:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x03);
+ 1d6:	83 e0       	ldi	r24, 0x03	; 3
+ 1d8:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_repeated_start();
+ 1dc:	0e 94 55 00 	call	0xaa	; 0xaa <twi_send_repeated_start>
+twi_status=twi_send_address_rw(0xd1);
+ 1e0:	81 ed       	ldi	r24, 0xD1	; 209
+ 1e2:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_receive_last_data();
+ 1e6:	0e 94 89 00 	call	0x112	; 0x112 <twi_master_receive_last_data>
+return twi_status;
+twi_send_stop();
+}
+ 1ea:	08 95       	ret
+
+000001ec <ds1307_read_date>:
+
+unsigned char ds1307_read_date()
+{
+unsigned char twi_status;
+twi_send_start();
+ 1ec:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 1f0:	80 ed       	ldi	r24, 0xD0	; 208
+ 1f2:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x04);
+ 1f6:	84 e0       	ldi	r24, 0x04	; 4
+ 1f8:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_repeated_start();
+ 1fc:	0e 94 55 00 	call	0xaa	; 0xaa <twi_send_repeated_start>
+twi_status=twi_send_address_rw(0xd1);
+ 200:	81 ed       	ldi	r24, 0xD1	; 209
+ 202:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_receive_last_data();
+ 206:	0e 94 89 00 	call	0x112	; 0x112 <twi_master_receive_last_data>
+return twi_status;
+twi_send_stop();
+}
+ 20a:	08 95       	ret
+
+0000020c <ds1307_read_month>:
+
+unsigned char ds1307_read_month()
+{
+unsigned char twi_status;
+twi_send_start();
+ 20c:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 210:	80 ed       	ldi	r24, 0xD0	; 208
+ 212:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x05);
+ 216:	85 e0       	ldi	r24, 0x05	; 5
+ 218:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_repeated_start();
+ 21c:	0e 94 55 00 	call	0xaa	; 0xaa <twi_send_repeated_start>
+twi_status=twi_send_address_rw(0xd1);
+ 220:	81 ed       	ldi	r24, 0xD1	; 209
+ 222:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_receive_last_data();
+ 226:	0e 94 89 00 	call	0x112	; 0x112 <twi_master_receive_last_data>
+return twi_status;
+twi_send_stop();
+}
+ 22a:	08 95       	ret
+
+0000022c <ds1307_read_year>:
+
+unsigned char ds1307_read_year()
+{
+unsigned char twi_status;
+twi_send_start();
+ 22c:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 230:	80 ed       	ldi	r24, 0xD0	; 208
+ 232:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x06);
+ 236:	86 e0       	ldi	r24, 0x06	; 6
+ 238:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_repeated_start();
+ 23c:	0e 94 55 00 	call	0xaa	; 0xaa <twi_send_repeated_start>
+twi_status=twi_send_address_rw(0xd1);
+ 240:	81 ed       	ldi	r24, 0xD1	; 209
+ 242:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_receive_last_data();
+ 246:	0e 94 89 00 	call	0x112	; 0x112 <twi_master_receive_last_data>
+return twi_status;
+twi_send_stop();
+}
+ 24a:	08 95       	ret
+
+0000024c <convert_decimal_to_bcd>:
+
+unsigned char convert_decimal_to_bcd(unsigned char decimal_number)
+{
+decimal_number=((decimal_number/10)*16)+(decimal_number%10);
+ 24c:	6a e0       	ldi	r22, 0x0A	; 10
+ 24e:	0e 94 6a 04 	call	0x8d4	; 0x8d4 <__udivmodqi4>
+ 252:	82 95       	swap	r24
+ 254:	80 7f       	andi	r24, 0xF0	; 240
+return decimal_number;
+}
+ 256:	89 0f       	add	r24, r25
+ 258:	08 95       	ret
+
+0000025a <ds1307_year_write>:
+twi_status=twi_master_send_data(month);
+twi_send_stop();
+}
+
+void ds1307_year_write(unsigned char year)
+{
+ 25a:	1f 93       	push	r17
+ 25c:	18 2f       	mov	r17, r24
+unsigned char twi_status;
+twi_send_start();
+ 25e:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 262:	80 ed       	ldi	r24, 0xD0	; 208
+ 264:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x06);
+ 268:	86 e0       	ldi	r24, 0x06	; 6
+ 26a:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+year=convert_decimal_to_bcd(year);
+ 26e:	81 2f       	mov	r24, r17
+ 270:	0e 94 26 01 	call	0x24c	; 0x24c <convert_decimal_to_bcd>
+twi_status=twi_master_send_data(year);
+ 274:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_stop();
+ 278:	0e 94 b0 00 	call	0x160	; 0x160 <twi_send_stop>
+}
+ 27c:	1f 91       	pop	r17
+ 27e:	08 95       	ret
+
+00000280 <ds1307_month_write>:
+twi_status=twi_master_send_data(date);
+twi_send_stop();
+}
+
+void ds1307_month_write(unsigned char month)
+{
+ 280:	1f 93       	push	r17
+ 282:	18 2f       	mov	r17, r24
+unsigned char twi_status;
+twi_send_start();
+ 284:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 288:	80 ed       	ldi	r24, 0xD0	; 208
+ 28a:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x05);
+ 28e:	85 e0       	ldi	r24, 0x05	; 5
+ 290:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+month=convert_decimal_to_bcd(month);
+ 294:	81 2f       	mov	r24, r17
+ 296:	0e 94 26 01 	call	0x24c	; 0x24c <convert_decimal_to_bcd>
+twi_status=twi_master_send_data(month);
+ 29a:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_stop();
+ 29e:	0e 94 b0 00 	call	0x160	; 0x160 <twi_send_stop>
+}
+ 2a2:	1f 91       	pop	r17
+ 2a4:	08 95       	ret
+
+000002a6 <ds1307_date_write>:
+twi_status=twi_master_send_data(day);
+twi_send_stop();
+}
+
+void ds1307_date_write(unsigned char date)
+{
+ 2a6:	1f 93       	push	r17
+ 2a8:	18 2f       	mov	r17, r24
+unsigned char twi_status;
+twi_send_start();
+ 2aa:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 2ae:	80 ed       	ldi	r24, 0xD0	; 208
+ 2b0:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x04);
+ 2b4:	84 e0       	ldi	r24, 0x04	; 4
+ 2b6:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+date=convert_decimal_to_bcd(date);
+ 2ba:	81 2f       	mov	r24, r17
+ 2bc:	0e 94 26 01 	call	0x24c	; 0x24c <convert_decimal_to_bcd>
+twi_status=twi_master_send_data(date);
+ 2c0:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_stop();
+ 2c4:	0e 94 b0 00 	call	0x160	; 0x160 <twi_send_stop>
+}
+ 2c8:	1f 91       	pop	r17
+ 2ca:	08 95       	ret
+
+000002cc <ds1307_day_write>:
+}
+twi_send_stop();
+}
+
+void ds1307_day_write(unsigned char day)
+{
+ 2cc:	1f 93       	push	r17
+ 2ce:	18 2f       	mov	r17, r24
+unsigned char twi_status;
+twi_send_start();
+ 2d0:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 2d4:	80 ed       	ldi	r24, 0xD0	; 208
+ 2d6:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x03);
+ 2da:	83 e0       	ldi	r24, 0x03	; 3
+ 2dc:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+day=convert_decimal_to_bcd(day);
+ 2e0:	81 2f       	mov	r24, r17
+ 2e2:	0e 94 26 01 	call	0x24c	; 0x24c <convert_decimal_to_bcd>
+twi_status=twi_master_send_data(day);
+ 2e6:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_stop();
+ 2ea:	0e 94 b0 00 	call	0x160	; 0x160 <twi_send_stop>
+}
+ 2ee:	1f 91       	pop	r17
+ 2f0:	08 95       	ret
+
+000002f2 <ds1307_hour_write>:
+twi_status=twi_master_send_data(minute);
+twi_send_stop();
+}
+
+void ds1307_hour_write(unsigned char hour,unsigned char hour_format, unsigned char am_pm)
+{
+ 2f2:	ff 92       	push	r15
+ 2f4:	0f 93       	push	r16
+ 2f6:	1f 93       	push	r17
+ 2f8:	08 2f       	mov	r16, r24
+ 2fa:	16 2f       	mov	r17, r22
+ 2fc:	f4 2e       	mov	r15, r20
+unsigned char twi_status;
+twi_send_start();
+ 2fe:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 302:	80 ed       	ldi	r24, 0xD0	; 208
+ 304:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x02);
+ 308:	82 e0       	ldi	r24, 0x02	; 2
+ 30a:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+if(hour_format==1)
+ 30e:	11 30       	cpi	r17, 0x01	; 1
+ 310:	69 f4       	brne	.+26     	; 0x32c <ds1307_hour_write+0x3a>
+{
+	hour=convert_decimal_to_bcd(hour);
+ 312:	80 2f       	mov	r24, r16
+ 314:	0e 94 26 01 	call	0x24c	; 0x24c <convert_decimal_to_bcd>
+	hour=hour | (1<<6) | (am_pm<<5);
+ 318:	80 64       	ori	r24, 0x40	; 64
+ 31a:	ff 0c       	add	r15, r15
+ 31c:	ff 0c       	add	r15, r15
+ 31e:	ff 0c       	add	r15, r15
+ 320:	ff 0c       	add	r15, r15
+ 322:	ff 0c       	add	r15, r15
+	twi_status=twi_master_send_data(hour);
+ 324:	8f 29       	or	r24, r15
+ 326:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+ 32a:	05 c0       	rjmp	.+10     	; 0x336 <ds1307_hour_write+0x44>
+}
+else
+{
+	hour=convert_decimal_to_bcd(hour);
+ 32c:	80 2f       	mov	r24, r16
+ 32e:	0e 94 26 01 	call	0x24c	; 0x24c <convert_decimal_to_bcd>
+	twi_status=twi_master_send_data(hour);
+ 332:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+}
+twi_send_stop();
+ 336:	0e 94 b0 00 	call	0x160	; 0x160 <twi_send_stop>
+}
+ 33a:	1f 91       	pop	r17
+ 33c:	0f 91       	pop	r16
+ 33e:	ff 90       	pop	r15
+ 340:	08 95       	ret
+
+00000342 <ds1307_minute_write>:
+twi_status=twi_master_send_data(second);
+twi_send_stop();
+}
+
+void ds1307_minute_write(unsigned char minute)
+{
+ 342:	1f 93       	push	r17
+ 344:	18 2f       	mov	r17, r24
+unsigned char twi_status;
+twi_send_start();
+ 346:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 34a:	80 ed       	ldi	r24, 0xD0	; 208
+ 34c:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x01);
+ 350:	81 e0       	ldi	r24, 0x01	; 1
+ 352:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+minute=convert_decimal_to_bcd(minute);
+ 356:	81 2f       	mov	r24, r17
+ 358:	0e 94 26 01 	call	0x24c	; 0x24c <convert_decimal_to_bcd>
+twi_status=twi_master_send_data(minute);
+ 35c:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_stop();
+ 360:	0e 94 b0 00 	call	0x160	; 0x160 <twi_send_stop>
+}
+ 364:	1f 91       	pop	r17
+ 366:	08 95       	ret
+
+00000368 <ds1307_second_write>:
+
+
+
+/*Function definations*/
+void ds1307_second_write(unsigned char second)
+{
+ 368:	1f 93       	push	r17
+ 36a:	18 2f       	mov	r17, r24
+unsigned char twi_status;
+twi_send_start();
+ 36c:	0e 94 4d 00 	call	0x9a	; 0x9a <twi_send_start>
+twi_status=twi_send_address_rw(0xd0);
+ 370:	80 ed       	ldi	r24, 0xD0	; 208
+ 372:	0e 94 5d 00 	call	0xba	; 0xba <twi_send_address_rw>
+twi_status=twi_master_send_data(0x00);
+ 376:	80 e0       	ldi	r24, 0x00	; 0
+ 378:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+second=convert_decimal_to_bcd(second);
+ 37c:	81 2f       	mov	r24, r17
+ 37e:	0e 94 26 01 	call	0x24c	; 0x24c <convert_decimal_to_bcd>
+twi_status=twi_master_send_data(second);
+ 382:	0e 94 66 00 	call	0xcc	; 0xcc <twi_master_send_data>
+twi_send_stop();
+ 386:	0e 94 b0 00 	call	0x160	; 0x160 <twi_send_stop>
+}
+ 38a:	1f 91       	pop	r17
+ 38c:	08 95       	ret
+
+0000038e <convert_bcd_to_decimal>:
+return decimal_number;
+}
+
+unsigned char convert_bcd_to_decimal(unsigned char bcd_number)
+{
+bcd_number=((bcd_number>>4)*10)+(bcd_number & 0x0f);
+ 38e:	98 2f       	mov	r25, r24
+ 390:	92 95       	swap	r25
+ 392:	9f 70       	andi	r25, 0x0F	; 15
+ 394:	99 0f       	add	r25, r25
+ 396:	29 2f       	mov	r18, r25
+ 398:	22 0f       	add	r18, r18
+ 39a:	22 0f       	add	r18, r18
+ 39c:	92 0f       	add	r25, r18
+ 39e:	8f 70       	andi	r24, 0x0F	; 15
+return bcd_number;
+}  
+ 3a0:	89 0f       	add	r24, r25
+ 3a2:	08 95       	ret
+
+000003a4 <Init_TWI>:
+volatile uint8_t day=1, ngay=11,thang=2,nam=9;
+volatile unsigned int count=0;
+volatile uint8_t a=0, b=0;
+//khoi dong TWI(I2C)
+void Init_TWI(void){
+	TWBR=32;
+ 3a4:	80 e2       	ldi	r24, 0x20	; 32
+ 3a6:	80 b9       	out	0x00, r24	; 0
+	TWSR=0x00;
+ 3a8:	11 b8       	out	0x01, r1	; 1
+	TWCR=(1<<TWINT)|(1<<TWEN);
+ 3aa:	84 e8       	ldi	r24, 0x84	; 132
+ 3ac:	86 bf       	out	0x36, r24	; 54
+}
+ 3ae:	08 95       	ret
+
+000003b0 <Dec_BCD>:
+uint8_t Dec_BCD(uint8_t Dec){
+	uint8_t temp,H,L;
+	L=(Dec%10);
+	H=(Dec/10)<<4;
+ 3b0:	6a e0       	ldi	r22, 0x0A	; 10
+ 3b2:	0e 94 6a 04 	call	0x8d4	; 0x8d4 <__udivmodqi4>
+ 3b6:	82 95       	swap	r24
+ 3b8:	80 7f       	andi	r24, 0xF0	; 240
+	
+	return (H+L);
+}
+ 3ba:	89 0f       	add	r24, r25
+ 3bc:	08 95       	ret
+
+000003be <BCD_Dec>:
+
+uint8_t BCD_Dec(uint8_t BCD){
+	uint8_t L,H;
+	L=BCD&0x0F;
+	H=(BCD>>4)*10;
+ 3be:	98 2f       	mov	r25, r24
+ 3c0:	92 95       	swap	r25
+ 3c2:	9f 70       	andi	r25, 0x0F	; 15
+ 3c4:	99 0f       	add	r25, r25
+ 3c6:	29 2f       	mov	r18, r25
+ 3c8:	22 0f       	add	r18, r18
+ 3ca:	22 0f       	add	r18, r18
+ 3cc:	92 0f       	add	r25, r18
+	return (H+L);
+}
+
+uint8_t BCD_Dec(uint8_t BCD){
+	uint8_t L,H;
+	L=BCD&0x0F;
+ 3ce:	8f 70       	andi	r24, 0x0F	; 15
+	H=(BCD>>4)*10;
+	return (H+L);	
+}
+ 3d0:	89 0f       	add	r24, r25
+ 3d2:	08 95       	ret
+
+000003d4 <I2C_Detect>:
+byte I2C_Detect(byte addr)
+// look for device at specified address; return 1=found, 0=not found
+{
+TWCR = TW_START; // send start condition
+ 3d4:	94 ea       	ldi	r25, 0xA4	; 164
+ 3d6:	96 bf       	out	0x36, r25	; 54
+while (!TW_READY); // wait
+ 3d8:	06 b6       	in	r0, 0x36	; 54
+ 3da:	07 fe       	sbrs	r0, 7
+ 3dc:	fd cf       	rjmp	.-6      	; 0x3d8 <I2C_Detect+0x4>
+TWDR = addr; // load device's bus address
+ 3de:	83 b9       	out	0x03, r24	; 3
+TWCR = TW_SEND; // and send it
+ 3e0:	84 e8       	ldi	r24, 0x84	; 132
+ 3e2:	86 bf       	out	0x36, r24	; 54
+while (!TW_READY); // wait
+ 3e4:	06 b6       	in	r0, 0x36	; 54
+ 3e6:	07 fe       	sbrs	r0, 7
+ 3e8:	fd cf       	rjmp	.-6      	; 0x3e4 <I2C_Detect+0x10>
+return (TW_STATUS==0x18); // return 1 if found; 0 otherwise
+ 3ea:	91 b1       	in	r25, 0x01	; 1
+ 3ec:	98 7f       	andi	r25, 0xF8	; 248
+ 3ee:	81 e0       	ldi	r24, 0x01	; 1
+ 3f0:	98 31       	cpi	r25, 0x18	; 24
+ 3f2:	09 f0       	breq	.+2      	; 0x3f6 <I2C_Detect+0x22>
+ 3f4:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 3f6:	08 95       	ret
+
+000003f8 <I2C_Start>:
+
+void I2C_Start (byte slaveAddr)
+{
+I2C_Detect(slaveAddr);
+ 3f8:	0e 94 ea 01 	call	0x3d4	; 0x3d4 <I2C_Detect>
+}
+ 3fc:	08 95       	ret
+
+000003fe <I2C_FindDevice>:
+
+byte I2C_FindDevice(byte start)
+// returns with address of first device found; 0=not found
+{
+ 3fe:	1f 93       	push	r17
+for (byte addr=start;addr<0xFF;addr++) // search all 256 addresses
+ 400:	8f 3f       	cpi	r24, 0xFF	; 255
+ 402:	59 f0       	breq	.+22     	; 0x41a <I2C_FindDevice+0x1c>
+ 404:	18 2f       	mov	r17, r24
+{
+if (I2C_Detect(addr)) // I2C detected?
+ 406:	81 2f       	mov	r24, r17
+ 408:	0e 94 ea 01 	call	0x3d4	; 0x3d4 <I2C_Detect>
+ 40c:	88 23       	and	r24, r24
+ 40e:	31 f4       	brne	.+12     	; 0x41c <I2C_FindDevice+0x1e>
+}
+
+byte I2C_FindDevice(byte start)
+// returns with address of first device found; 0=not found
+{
+for (byte addr=start;addr<0xFF;addr++) // search all 256 addresses
+ 410:	1f 5f       	subi	r17, 0xFF	; 255
+ 412:	1f 3f       	cpi	r17, 0xFF	; 255
+ 414:	c1 f7       	brne	.-16     	; 0x406 <I2C_FindDevice+0x8>
+{
+if (I2C_Detect(addr)) // I2C detected?
+return addr; // leave as soon as one is found
+}
+return 0; // none detected, so return 0.
+ 416:	10 e0       	ldi	r17, 0x00	; 0
+ 418:	01 c0       	rjmp	.+2      	; 0x41c <I2C_FindDevice+0x1e>
+ 41a:	10 e0       	ldi	r17, 0x00	; 0
+}
+ 41c:	81 2f       	mov	r24, r17
+ 41e:	1f 91       	pop	r17
+ 420:	08 95       	ret
+
+00000422 <I2C_Write>:
+
+byte I2C_Write (byte data) // sends a data byte to slave
+{
+TWDR = data; // load data to be sent
+ 422:	83 b9       	out	0x03, r24	; 3
+TWCR = TW_SEND; // and send it
+ 424:	84 e8       	ldi	r24, 0x84	; 132
+ 426:	86 bf       	out	0x36, r24	; 54
+while (!TW_READY); // wait
+ 428:	06 b6       	in	r0, 0x36	; 54
+ 42a:	07 fe       	sbrs	r0, 7
+ 42c:	fd cf       	rjmp	.-6      	; 0x428 <I2C_Write+0x6>
+return (TW_STATUS!=0x28);
+ 42e:	91 b1       	in	r25, 0x01	; 1
+ 430:	98 7f       	andi	r25, 0xF8	; 248
+ 432:	81 e0       	ldi	r24, 0x01	; 1
+ 434:	98 32       	cpi	r25, 0x28	; 40
+ 436:	09 f4       	brne	.+2      	; 0x43a <I2C_Write+0x18>
+ 438:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 43a:	08 95       	ret
+
+0000043c <I2C_ReadACK>:
+byte I2C_ReadACK () // reads a data byte from slave
+{
+TWCR = TW_ACK; // ack = will read more data
+ 43c:	84 ec       	ldi	r24, 0xC4	; 196
+ 43e:	86 bf       	out	0x36, r24	; 54
+while (!TW_READY); // wait
+ 440:	06 b6       	in	r0, 0x36	; 54
+ 442:	07 fe       	sbrs	r0, 7
+ 444:	fd cf       	rjmp	.-6      	; 0x440 <I2C_ReadACK+0x4>
+return TWDR;
+ 446:	83 b1       	in	r24, 0x03	; 3
+//return (TW_STATUS!=0x28);
+}
+ 448:	08 95       	ret
+
+0000044a <I2C_ReadNACK>:
+byte I2C_ReadNACK () // reads a data byte from slave
+{
+TWCR = TW_NACK; // nack = not reading more data
+ 44a:	84 e8       	ldi	r24, 0x84	; 132
+ 44c:	86 bf       	out	0x36, r24	; 54
+while (!TW_READY); // wait
+ 44e:	06 b6       	in	r0, 0x36	; 54
+ 450:	07 fe       	sbrs	r0, 7
+ 452:	fd cf       	rjmp	.-6      	; 0x44e <I2C_ReadNACK+0x4>
+return TWDR;
+ 454:	83 b1       	in	r24, 0x03	; 3
+//return (TW_STATUS!=0x28);
+}
+ 456:	08 95       	ret
+
+00000458 <I2C_WriteRegister>:
+
+
+void I2C_WriteRegister(byte busAddr, byte deviceRegister, byte data){
+ 458:	0f 93       	push	r16
+ 45a:	1f 93       	push	r17
+ 45c:	06 2f       	mov	r16, r22
+ 45e:	14 2f       	mov	r17, r20
+I2C_Start(busAddr); // send bus address
+ 460:	0e 94 fc 01 	call	0x3f8	; 0x3f8 <I2C_Start>
+I2C_Write(deviceRegister); // first byte = device register address
+ 464:	80 2f       	mov	r24, r16
+ 466:	0e 94 11 02 	call	0x422	; 0x422 <I2C_Write>
+I2C_Write(data); // second byte = data for device register
+ 46a:	81 2f       	mov	r24, r17
+ 46c:	0e 94 11 02 	call	0x422	; 0x422 <I2C_Write>
+I2C_Stop();
+ 470:	84 e9       	ldi	r24, 0x94	; 148
+ 472:	86 bf       	out	0x36, r24	; 54
+}
+ 474:	1f 91       	pop	r17
+ 476:	0f 91       	pop	r16
+ 478:	08 95       	ret
+
+0000047a <I2C_ReadRegister>:
+
+byte I2C_ReadRegister(byte busAddr, byte deviceRegister)
+{
+ 47a:	0f 93       	push	r16
+ 47c:	1f 93       	push	r17
+ 47e:	18 2f       	mov	r17, r24
+ 480:	06 2f       	mov	r16, r22
+byte data = 0;
+I2C_Start(busAddr); // send device address
+ 482:	0e 94 fc 01 	call	0x3f8	; 0x3f8 <I2C_Start>
+I2C_Write(deviceRegister); // set register pointer
+ 486:	80 2f       	mov	r24, r16
+ 488:	0e 94 11 02 	call	0x422	; 0x422 <I2C_Write>
+I2C_Start(busAddr+READ); // restart as a read operation
+ 48c:	81 2f       	mov	r24, r17
+ 48e:	8f 5f       	subi	r24, 0xFF	; 255
+ 490:	0e 94 fc 01 	call	0x3f8	; 0x3f8 <I2C_Start>
+data = I2C_ReadNACK(); // read the register data
+ 494:	0e 94 25 02 	call	0x44a	; 0x44a <I2C_ReadNACK>
+I2C_Stop(); // stop
+ 498:	94 e9       	ldi	r25, 0x94	; 148
+ 49a:	96 bf       	out	0x36, r25	; 54
+return data;
+}
+ 49c:	1f 91       	pop	r17
+ 49e:	0f 91       	pop	r16
+ 4a0:	08 95       	ret
+
+000004a2 <DS1307_GetTime>:
+void DS1307_GetTime()
+// returns hours, minutes, and seconds in BCD format
+{
+ 4a2:	cf 93       	push	r28
+ 4a4:	df 93       	push	r29
+data[2] = I2C_ReadRegister(DS1307,HOURS_REGISTER);
+ 4a6:	80 ed       	ldi	r24, 0xD0	; 208
+ 4a8:	62 e0       	ldi	r22, 0x02	; 2
+ 4aa:	0e 94 3d 02 	call	0x47a	; 0x47a <I2C_ReadRegister>
+ 4ae:	c8 e7       	ldi	r28, 0x78	; 120
+ 4b0:	d0 e0       	ldi	r29, 0x00	; 0
+ 4b2:	80 93 78 00 	sts	0x0078, r24
+data[1] = I2C_ReadRegister(DS1307,MINUTES_REGISTER);
+ 4b6:	80 ed       	ldi	r24, 0xD0	; 208
+ 4b8:	61 e0       	ldi	r22, 0x01	; 1
+ 4ba:	0e 94 3d 02 	call	0x47a	; 0x47a <I2C_ReadRegister>
+ 4be:	fe 01       	movw	r30, r28
+ 4c0:	31 97       	sbiw	r30, 0x01	; 1
+ 4c2:	80 83       	st	Z, r24
+data[0] = I2C_ReadRegister(DS1307,SECONDS_REGISTER);
+ 4c4:	80 ed       	ldi	r24, 0xD0	; 208
+ 4c6:	60 e0       	ldi	r22, 0x00	; 0
+ 4c8:	0e 94 3d 02 	call	0x47a	; 0x47a <I2C_ReadRegister>
+ 4cc:	22 97       	sbiw	r28, 0x02	; 2
+ 4ce:	88 83       	st	Y, r24
+
+}
+ 4d0:	df 91       	pop	r29
+ 4d2:	cf 91       	pop	r28
+ 4d4:	08 95       	ret
+
+000004d6 <DS1307_GetDate>:
+
+void DS1307_GetDate()
+// returns months, days, and years in BCD format
+{
+data[5] = I2C_ReadRegister(DS1307,MONTHS_REGISTER);
+ 4d6:	80 ed       	ldi	r24, 0xD0	; 208
+ 4d8:	65 e0       	ldi	r22, 0x05	; 5
+ 4da:	0e 94 3d 02 	call	0x47a	; 0x47a <I2C_ReadRegister>
+ 4de:	80 93 7b 00 	sts	0x007B, r24
+data[4] = I2C_ReadRegister(DS1307,DAYS_REGISTER);
+ 4e2:	80 ed       	ldi	r24, 0xD0	; 208
+ 4e4:	64 e0       	ldi	r22, 0x04	; 4
+ 4e6:	0e 94 3d 02 	call	0x47a	; 0x47a <I2C_ReadRegister>
+ 4ea:	80 93 7a 00 	sts	0x007A, r24
+data[6] = I2C_ReadRegister(DS1307,YEARS_REGISTER);
+ 4ee:	80 ed       	ldi	r24, 0xD0	; 208
+ 4f0:	66 e0       	ldi	r22, 0x06	; 6
+ 4f2:	0e 94 3d 02 	call	0x47a	; 0x47a <I2C_ReadRegister>
+ 4f6:	80 93 7c 00 	sts	0x007C, r24
+}
+ 4fa:	08 95       	ret
+
+000004fc <SetTimeDate>:
+void SetTimeDate()
+// simple, hard-coded way to set the date.
+{
+ 4fc:	cf 93       	push	r28
+ 4fe:	df 93       	push	r29
+I2C_WriteRegister(DS1307,MONTHS_REGISTER, data[5]);
+ 500:	cb e7       	ldi	r28, 0x7B	; 123
+ 502:	d0 e0       	ldi	r29, 0x00	; 0
+ 504:	40 91 7b 00 	lds	r20, 0x007B
+ 508:	80 ed       	ldi	r24, 0xD0	; 208
+ 50a:	65 e0       	ldi	r22, 0x05	; 5
+ 50c:	0e 94 2c 02 	call	0x458	; 0x458 <I2C_WriteRegister>
+I2C_WriteRegister(DS1307,DAYS_REGISTER, data[4]);
+ 510:	fe 01       	movw	r30, r28
+ 512:	31 97       	sbiw	r30, 0x01	; 1
+ 514:	40 81       	ld	r20, Z
+ 516:	80 ed       	ldi	r24, 0xD0	; 208
+ 518:	64 e0       	ldi	r22, 0x04	; 4
+ 51a:	0e 94 2c 02 	call	0x458	; 0x458 <I2C_WriteRegister>
+I2C_WriteRegister(DS1307,YEARS_REGISTER, data[6]);
+ 51e:	40 91 7c 00 	lds	r20, 0x007C
+ 522:	80 ed       	ldi	r24, 0xD0	; 208
+ 524:	66 e0       	ldi	r22, 0x06	; 6
+ 526:	0e 94 2c 02 	call	0x458	; 0x458 <I2C_WriteRegister>
+I2C_WriteRegister(DS1307,HOURS_REGISTER, data[2]); // add 0x40 for PM
+ 52a:	fe 01       	movw	r30, r28
+ 52c:	33 97       	sbiw	r30, 0x03	; 3
+ 52e:	40 81       	ld	r20, Z
+ 530:	80 ed       	ldi	r24, 0xD0	; 208
+ 532:	62 e0       	ldi	r22, 0x02	; 2
+ 534:	0e 94 2c 02 	call	0x458	; 0x458 <I2C_WriteRegister>
+I2C_WriteRegister(DS1307,MINUTES_REGISTER, data[1]);
+ 538:	fe 01       	movw	r30, r28
+ 53a:	34 97       	sbiw	r30, 0x04	; 4
+ 53c:	40 81       	ld	r20, Z
+ 53e:	80 ed       	ldi	r24, 0xD0	; 208
+ 540:	61 e0       	ldi	r22, 0x01	; 1
+ 542:	0e 94 2c 02 	call	0x458	; 0x458 <I2C_WriteRegister>
+I2C_WriteRegister(DS1307,SECONDS_REGISTER, data[0]);
+ 546:	25 97       	sbiw	r28, 0x05	; 5
+ 548:	48 81       	ld	r20, Y
+ 54a:	80 ed       	ldi	r24, 0xD0	; 208
+ 54c:	60 e0       	ldi	r22, 0x00	; 0
+ 54e:	0e 94 2c 02 	call	0x458	; 0x458 <I2C_WriteRegister>
+}
+ 552:	df 91       	pop	r29
+ 554:	cf 91       	pop	r28
+ 556:	08 95       	ret
+
+00000558 <Display>:
+}
+*/
+
+void Display(void){
+	
+	 giay=BCD_Dec(data[0]&0x7F);
+ 558:	80 91 76 00 	lds	r24, 0x0076
+ 55c:	8f 77       	andi	r24, 0x7F	; 127
+ 55e:	0e 94 df 01 	call	0x3be	; 0x3be <BCD_Dec>
+ 562:	80 93 6e 00 	sts	0x006E, r24
+	 phut=BCD_Dec(data[1]);
+ 566:	80 91 77 00 	lds	r24, 0x0077
+ 56a:	0e 94 df 01 	call	0x3be	; 0x3be <BCD_Dec>
+ 56e:	80 93 6f 00 	sts	0x006F, r24
+	 gio=BCD_Dec(data[2]&0x1F);// su dung mode 12h
+ 572:	80 91 78 00 	lds	r24, 0x0078
+ 576:	8f 71       	andi	r24, 0x1F	; 31
+ 578:	0e 94 df 01 	call	0x3be	; 0x3be <BCD_Dec>
+ 57c:	80 93 70 00 	sts	0x0070, r24
+	 
+	 ngay=BCD_Dec(data[4]);
+ 580:	80 91 7a 00 	lds	r24, 0x007A
+ 584:	0e 94 df 01 	call	0x3be	; 0x3be <BCD_Dec>
+ 588:	80 93 72 00 	sts	0x0072, r24
+	 thang=BCD_Dec(data[5]);
+ 58c:	80 91 7b 00 	lds	r24, 0x007B
+ 590:	0e 94 df 01 	call	0x3be	; 0x3be <BCD_Dec>
+ 594:	80 93 73 00 	sts	0x0073, r24
+	 nam=BCD_Dec(data[6]);
+ 598:	80 91 7c 00 	lds	r24, 0x007C
+ 59c:	0e 94 df 01 	call	0x3be	; 0x3be <BCD_Dec>
+ 5a0:	80 93 74 00 	sts	0x0074, r24
+	 
+	 
+	 cursor_home();
+ 5a4:	0e 94 08 04 	call	0x810	; 0x810 <cursor_home>
+	 putstr_lcd("Time: ",6);
+ 5a8:	80 e6       	ldi	r24, 0x60	; 96
+ 5aa:	90 e0       	ldi	r25, 0x00	; 0
+ 5ac:	66 e0       	ldi	r22, 0x06	; 6
+ 5ae:	70 e0       	ldi	r23, 0x00	; 0
+ 5b0:	0e 94 46 04 	call	0x88c	; 0x88c <putstr_lcd>
+	 movecursor(1,8);
+ 5b4:	81 e0       	ldi	r24, 0x01	; 1
+ 5b6:	68 e0       	ldi	r22, 0x08	; 8
+ 5b8:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+	 printnumber_lcd(gio);
+ 5bc:	80 91 70 00 	lds	r24, 0x0070
+ 5c0:	0e 94 38 04 	call	0x870	; 0x870 <printnumber_lcd>
+	 movecursor(1,10);
+ 5c4:	81 e0       	ldi	r24, 0x01	; 1
+ 5c6:	6a e0       	ldi	r22, 0x0A	; 10
+ 5c8:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+	 putchar_lcd(':');
+ 5cc:	8a e3       	ldi	r24, 0x3A	; 58
+ 5ce:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+	 movecursor(1,11);
+ 5d2:	81 e0       	ldi	r24, 0x01	; 1
+ 5d4:	6b e0       	ldi	r22, 0x0B	; 11
+ 5d6:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+	 printnumber_lcd(phut);
+ 5da:	80 91 6f 00 	lds	r24, 0x006F
+ 5de:	0e 94 38 04 	call	0x870	; 0x870 <printnumber_lcd>
+	 movecursor(1,13);
+ 5e2:	81 e0       	ldi	r24, 0x01	; 1
+ 5e4:	6d e0       	ldi	r22, 0x0D	; 13
+ 5e6:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+	 putchar_lcd(':');
+ 5ea:	8a e3       	ldi	r24, 0x3A	; 58
+ 5ec:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+	 movecursor(1,14);
+ 5f0:	81 e0       	ldi	r24, 0x01	; 1
+ 5f2:	6e e0       	ldi	r22, 0x0E	; 14
+ 5f4:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+	 printnumber_lcd(giay);
+ 5f8:	80 91 6e 00 	lds	r24, 0x006E
+ 5fc:	0e 94 38 04 	call	0x870	; 0x870 <printnumber_lcd>
+	 
+	 movecursor(1,16);
+ 600:	81 e0       	ldi	r24, 0x01	; 1
+ 602:	60 e1       	ldi	r22, 0x10	; 16
+ 604:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+	 if(bit_is_clear(data[2],5)) putchar_lcd('A');
+ 608:	80 91 78 00 	lds	r24, 0x0078
+ 60c:	85 fd       	sbrc	r24, 5
+ 60e:	04 c0       	rjmp	.+8      	; 0x618 <Display+0xc0>
+ 610:	81 e4       	ldi	r24, 0x41	; 65
+ 612:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+ 616:	03 c0       	rjmp	.+6      	; 0x61e <Display+0xc6>
+	 else putchar_lcd('P');
+ 618:	80 e5       	ldi	r24, 0x50	; 80
+ 61a:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+	 
+	 //date=BCD_Dec(data[4]);
+	 //month=BCD_Dec(data[5]);
+	// year=BCD_Dec(data[6]);
+	 movecursor(2,1);
+ 61e:	82 e0       	ldi	r24, 0x02	; 2
+ 620:	61 e0       	ldi	r22, 0x01	; 1
+ 622:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+	 putstr_lcd("Date: ",6);
+ 626:	87 e6       	ldi	r24, 0x67	; 103
+ 628:	90 e0       	ldi	r25, 0x00	; 0
+ 62a:	66 e0       	ldi	r22, 0x06	; 6
+ 62c:	70 e0       	ldi	r23, 0x00	; 0
+ 62e:	0e 94 46 04 	call	0x88c	; 0x88c <putstr_lcd>
+	 movecursor(2,8);
+ 632:	82 e0       	ldi	r24, 0x02	; 2
+ 634:	68 e0       	ldi	r22, 0x08	; 8
+ 636:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+	 printnumber_lcd(ngay);
+ 63a:	80 91 72 00 	lds	r24, 0x0072
+ 63e:	0e 94 38 04 	call	0x870	; 0x870 <printnumber_lcd>
+	 putchar_lcd('-');
+ 642:	8d e2       	ldi	r24, 0x2D	; 45
+ 644:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+	 printnumber_lcd(thang);
+ 648:	80 91 73 00 	lds	r24, 0x0073
+ 64c:	0e 94 38 04 	call	0x870	; 0x870 <printnumber_lcd>
+	 putchar_lcd('-');
+ 650:	8d e2       	ldi	r24, 0x2D	; 45
+ 652:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+	 printnumber_lcd(nam);
+ 656:	80 91 74 00 	lds	r24, 0x0074
+ 65a:	0e 94 38 04 	call	0x870	; 0x870 <printnumber_lcd>
+	 
+}
+ 65e:	08 95       	ret
+
+00000660 <main>:
+volatile uint8_t x;
+int main(void)
+{
+	init_lcd();
+ 660:	0e 94 e7 03 	call	0x7ce	; 0x7ce <init_lcd>
+
+	//tao khoang thoi gian duoi 50ms bang timer 0;
+	
+	TCCR0=(1<<CS02)|(0<<CS01)|(1<<CS00);
+ 664:	85 e0       	ldi	r24, 0x05	; 5
+ 666:	83 bf       	out	0x33, r24	; 51
+	TIMSK=(1<<TOIE0);
+ 668:	81 e0       	ldi	r24, 0x01	; 1
+ 66a:	89 bf       	out	0x39, r24	; 57
+	sei();
+ 66c:	78 94       	sei
+	//
+	Init_TWI();
+ 66e:	0e 94 d2 01 	call	0x3a4	; 0x3a4 <Init_TWI>
+	
+	data[0]=Dec_BCD(21);
+ 672:	85 e1       	ldi	r24, 0x15	; 21
+ 674:	0e 94 d8 01 	call	0x3b0	; 0x3b0 <Dec_BCD>
+ 678:	80 93 76 00 	sts	0x0076, r24
+	data[3]=Dec_BCD(day);
+	data[4]=Dec_BCD(ngay);
+	data[5]=Dec_BCD(thang);
+	data[6]=Dec_BCD(nam);*/
+	
+	Init_TWI();		
+ 67c:	0e 94 d2 01 	call	0x3a4	; 0x3a4 <Init_TWI>
+	
+	//ghi cac byte data vao chip DS1307
+	//TWI_write_DS(0x00,data,7);
+	//SetTimeDate();
+	I2C_WriteRegister(DS1307,SECONDS_REGISTER, data[0]);		
+ 680:	40 91 76 00 	lds	r20, 0x0076
+ 684:	80 ed       	ldi	r24, 0xD0	; 208
+ 686:	60 e0       	ldi	r22, 0x00	; 0
+ 688:	0e 94 2c 02 	call	0x458	; 0x458 <I2C_WriteRegister>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 68c:	8f e9       	ldi	r24, 0x9F	; 159
+ 68e:	9f e0       	ldi	r25, 0x0F	; 15
+ 690:	01 97       	sbiw	r24, 0x01	; 1
+ 692:	f1 f7       	brne	.-4      	; 0x690 <main+0x30>
+ 694:	00 c0       	rjmp	.+0      	; 0x696 <main+0x36>
+ 696:	00 00       	nop
+	_delay_ms(2);
+	//set dia chi bat dau doc
+	//set_addr_register_DS(0x00);
+	
+	//doc du lieu tu DS1307
+	data[0] = I2C_ReadRegister(DS1307,SECONDS_REGISTER);
+ 698:	80 ed       	ldi	r24, 0xD0	; 208
+ 69a:	60 e0       	ldi	r22, 0x00	; 0
+ 69c:	0e 94 3d 02 	call	0x47a	; 0x47a <I2C_ReadRegister>
+ 6a0:	80 93 76 00 	sts	0x0076, r24
+	x=BCD_Dec(data[0]&0x7F);
+ 6a4:	80 91 76 00 	lds	r24, 0x0076
+ 6a8:	8f 77       	andi	r24, 0x7F	; 127
+ 6aa:	0e 94 df 01 	call	0x3be	; 0x3be <BCD_Dec>
+ 6ae:	80 93 81 00 	sts	0x0081, r24
+	//DS1307_GetTime();
+	//DS1307_GetDate();	
+	//Display();
+	movecursor(1,1);
+ 6b2:	81 e0       	ldi	r24, 0x01	; 1
+ 6b4:	61 e0       	ldi	r22, 0x01	; 1
+ 6b6:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+	printnumber_lcd(x);
+ 6ba:	80 91 81 00 	lds	r24, 0x0081
+ 6be:	0e 94 38 04 	call	0x870	; 0x870 <printnumber_lcd>
+ 6c2:	ff cf       	rjmp	.-2      	; 0x6c2 <main+0x62>
+
+000006c4 <__vector_11>:
+    {    
+    }
+	return 0;
+}
+
+ISR(TIMER0_OVF_vect){
+ 6c4:	1f 92       	push	r1
+ 6c6:	0f 92       	push	r0
+ 6c8:	0f b6       	in	r0, 0x3f	; 63
+ 6ca:	0f 92       	push	r0
+ 6cc:	11 24       	eor	r1, r1
+ 6ce:	2f 93       	push	r18
+ 6d0:	3f 93       	push	r19
+ 6d2:	4f 93       	push	r20
+ 6d4:	5f 93       	push	r21
+ 6d6:	6f 93       	push	r22
+ 6d8:	7f 93       	push	r23
+ 6da:	8f 93       	push	r24
+ 6dc:	9f 93       	push	r25
+ 6de:	af 93       	push	r26
+ 6e0:	bf 93       	push	r27
+ 6e2:	ef 93       	push	r30
+ 6e4:	ff 93       	push	r31
+	count++;
+ 6e6:	80 91 7d 00 	lds	r24, 0x007D
+ 6ea:	90 91 7e 00 	lds	r25, 0x007E
+ 6ee:	01 96       	adiw	r24, 0x01	; 1
+ 6f0:	90 93 7e 00 	sts	0x007E, r25
+ 6f4:	80 93 7d 00 	sts	0x007D, r24
+	
+	if(count==11){
+ 6f8:	80 91 7d 00 	lds	r24, 0x007D
+ 6fc:	90 91 7e 00 	lds	r25, 0x007E
+ 700:	8b 30       	cpi	r24, 0x0B	; 11
+ 702:	91 05       	cpc	r25, r1
+ 704:	d9 f4       	brne	.+54     	; 0x73c <__vector_11+0x78>
+	clear_lcd();
+ 706:	0e 94 0f 04 	call	0x81e	; 0x81e <clear_lcd>
+	//_delay_ms(1);
+	//doc du lieu tu DS1307
+	//DS1307_GetTime();
+	//DS1307_GetDate();	
+	//if(BCD_Dec(data[0]&0x7F)!=giay){
+			data[0] = I2C_ReadRegister(DS1307,SECONDS_REGISTER);
+ 70a:	80 ed       	ldi	r24, 0xD0	; 208
+ 70c:	60 e0       	ldi	r22, 0x00	; 0
+ 70e:	0e 94 3d 02 	call	0x47a	; 0x47a <I2C_ReadRegister>
+ 712:	80 93 76 00 	sts	0x0076, r24
+	giay=BCD_Dec(data[0]&0x7F);
+ 716:	80 91 76 00 	lds	r24, 0x0076
+ 71a:	8f 77       	andi	r24, 0x7F	; 127
+ 71c:	0e 94 df 01 	call	0x3be	; 0x3be <BCD_Dec>
+ 720:	80 93 6e 00 	sts	0x006E, r24
+	//	movecursor(1,14);                                                         
+	//	putchar_lcd("  ");
+		movecursor(1,14);
+ 724:	81 e0       	ldi	r24, 0x01	; 1
+ 726:	6e e0       	ldi	r22, 0x0E	; 14
+ 728:	0e 94 16 04 	call	0x82c	; 0x82c <movecursor>
+		printnumber_lcd(giay);
+ 72c:	80 91 6e 00 	lds	r24, 0x006E
+ 730:	0e 94 38 04 	call	0x870	; 0x870 <printnumber_lcd>
+//		if(giay==0) Display();
+//	}
+	count=0;
+ 734:	10 92 7e 00 	sts	0x007E, r1
+ 738:	10 92 7d 00 	sts	0x007D, r1
+	}
+ 73c:	ff 91       	pop	r31
+ 73e:	ef 91       	pop	r30
+ 740:	bf 91       	pop	r27
+ 742:	af 91       	pop	r26
+ 744:	9f 91       	pop	r25
+ 746:	8f 91       	pop	r24
+ 748:	7f 91       	pop	r23
+ 74a:	6f 91       	pop	r22
+ 74c:	5f 91       	pop	r21
+ 74e:	4f 91       	pop	r20
+ 750:	3f 91       	pop	r19
+ 752:	2f 91       	pop	r18
+ 754:	0f 90       	pop	r0
+ 756:	0f be       	out	0x3f, r0	; 63
+ 758:	0f 90       	pop	r0
+ 75a:	1f 90       	pop	r1
+ 75c:	18 95       	reti
+
+0000075e <read_2Nib>:
+
+
+char read_2Nib(void){
+    unsigned char HNib,LNib;
+	
+	setbit(CTRL,EN);
+ 75e:	92 9a       	sbi	0x12, 2	; 18
+	DDR_DATA=0x0F;
+ 760:	8f e0       	ldi	r24, 0x0F	; 15
+ 762:	81 bb       	out	0x11, r24	; 17
+	HNib=DATA_input&0xF0;
+ 764:	80 b3       	in	r24, 0x10	; 16
+	clearbit(CTRL,EN);
+ 766:	92 98       	cbi	0x12, 2	; 18
+	
+	setbit(CTRL,EN);
+ 768:	92 9a       	sbi	0x12, 2	; 18
+	LNib=DATA_input&0xF0;
+ 76a:	90 b3       	in	r25, 0x10	; 16
+	clearbit(CTRL,EN);
+ 76c:	92 98       	cbi	0x12, 2	; 18
+	LNib>>=4;
+ 76e:	92 95       	swap	r25
+ 770:	9f 70       	andi	r25, 0x0F	; 15
+char read_2Nib(void){
+    unsigned char HNib,LNib;
+	
+	setbit(CTRL,EN);
+	DDR_DATA=0x0F;
+	HNib=DATA_input&0xF0;
+ 772:	80 7f       	andi	r24, 0xF0	; 240
+	LNib=DATA_input&0xF0;
+	clearbit(CTRL,EN);
+	LNib>>=4;
+	
+	return (HNib|LNib);
+}
+ 774:	89 2b       	or	r24, r25
+ 776:	08 95       	ret
+
+00000778 <write_2Nib>:
+void write_2Nib(unsigned char data){
+	unsigned char HNib, LNib, temp;
+	temp=DATA_output&0x0F;
+ 778:	92 b3       	in	r25, 0x12	; 18
+ 77a:	9f 70       	andi	r25, 0x0F	; 15
+	HNib=data&0xF0;
+ 77c:	28 2f       	mov	r18, r24
+ 77e:	20 7f       	andi	r18, 0xF0	; 240
+	LNib=(data<<4)&0xF0;
+	
+	DATA_output=HNib|temp;
+ 780:	29 2b       	or	r18, r25
+ 782:	22 bb       	out	0x12, r18	; 18
+	setbit(CTRL,EN);
+ 784:	92 9a       	sbi	0x12, 2	; 18
+	clearbit(CTRL,EN);
+ 786:	92 98       	cbi	0x12, 2	; 18
+}
+void write_2Nib(unsigned char data){
+	unsigned char HNib, LNib, temp;
+	temp=DATA_output&0x0F;
+	HNib=data&0xF0;
+	LNib=(data<<4)&0xF0;
+ 788:	82 95       	swap	r24
+ 78a:	80 7f       	andi	r24, 0xF0	; 240
+	
+	DATA_output=HNib|temp;
+	setbit(CTRL,EN);
+	clearbit(CTRL,EN);
+	
+	DATA_output=LNib|temp;
+ 78c:	98 2b       	or	r25, r24
+ 78e:	92 bb       	out	0x12, r25	; 18
+	setbit(CTRL,EN);
+ 790:	92 9a       	sbi	0x12, 2	; 18
+	clearbit(CTRL,EN);
+ 792:	92 98       	cbi	0x12, 2	; 18
+	
+}
+ 794:	08 95       	ret
+
+00000796 <wait_lcd>:
+void wait_lcd(void){
+ 796:	0f 93       	push	r16
+ 798:	1f 93       	push	r17
+ 79a:	df 93       	push	r29
+ 79c:	cf 93       	push	r28
+ 79e:	0f 92       	push	r0
+ 7a0:	cd b7       	in	r28, 0x3d	; 61
+ 7a2:	de b7       	in	r29, 0x3e	; 62
+	while(1){
+     	clearbit(CTRL,RS);
+		setbit(CTRL,RW);
+		temp=read_2Nib();
+		
+		if(bit_is_clear(temp,7)) break;
+ 7a4:	8e 01       	movw	r16, r28
+ 7a6:	0f 5f       	subi	r16, 0xFF	; 255
+ 7a8:	1f 4f       	sbci	r17, 0xFF	; 255
+}
+void wait_lcd(void){
+	unsigned char temp;
+	
+	while(1){
+     	clearbit(CTRL,RS);
+ 7aa:	90 98       	cbi	0x12, 0	; 18
+		setbit(CTRL,RW);
+ 7ac:	91 9a       	sbi	0x12, 1	; 18
+		temp=read_2Nib();
+ 7ae:	0e 94 af 03 	call	0x75e	; 0x75e <read_2Nib>
+ 7b2:	89 83       	std	Y+1, r24	; 0x01
+		
+		if(bit_is_clear(temp,7)) break;
+ 7b4:	f8 01       	movw	r30, r16
+ 7b6:	80 81       	ld	r24, Z
+ 7b8:	88 23       	and	r24, r24
+ 7ba:	bc f3       	brlt	.-18     	; 0x7aa <wait_lcd+0x14>
+	}
+	clearbit(CTRL,RW);
+ 7bc:	91 98       	cbi	0x12, 1	; 18
+	DDR_DATA=0xFF;
+ 7be:	8f ef       	ldi	r24, 0xFF	; 255
+ 7c0:	81 bb       	out	0x11, r24	; 17
+	
+}
+ 7c2:	0f 90       	pop	r0
+ 7c4:	cf 91       	pop	r28
+ 7c6:	df 91       	pop	r29
+ 7c8:	1f 91       	pop	r17
+ 7ca:	0f 91       	pop	r16
+ 7cc:	08 95       	ret
+
+000007ce <init_lcd>:
+
+void init_lcd(){//uses mode 4 bit
+	DDR_CTRL=0xFF;
+ 7ce:	8f ef       	ldi	r24, 0xFF	; 255
+ 7d0:	81 bb       	out	0x11, r24	; 17
+	DDR_DATA=0xFF;
+ 7d2:	81 bb       	out	0x11, r24	; 17
+	clearbit(CTRL,RS);
+ 7d4:	90 98       	cbi	0x12, 0	; 18
+	clearbit(CTRL,RW);
+ 7d6:	91 98       	cbi	0x12, 1	; 18
+	clearbit(CTRL,EN);
+ 7d8:	92 98       	cbi	0x12, 2	; 18
+	
+//function set	
+	setbit(CTRL,EN);
+ 7da:	92 9a       	sbi	0x12, 2	; 18
+	setbit(DATA_output,5);
+ 7dc:	95 9a       	sbi	0x12, 5	; 18
+	clearbit(CTRL,EN);
+ 7de:	92 98       	cbi	0x12, 2	; 18
+	wait_lcd();
+ 7e0:	0e 94 cb 03 	call	0x796	; 0x796 <wait_lcd>
+	write_2Nib(0x28);
+ 7e4:	88 e2       	ldi	r24, 0x28	; 40
+ 7e6:	0e 94 bc 03 	call	0x778	; 0x778 <write_2Nib>
+	wait_lcd();
+ 7ea:	0e 94 cb 03 	call	0x796	; 0x796 <wait_lcd>
+//display on/off control
+    write_2Nib(0x0C);
+ 7ee:	8c e0       	ldi	r24, 0x0C	; 12
+ 7f0:	0e 94 bc 03 	call	0x778	; 0x778 <write_2Nib>
+	wait_lcd();
+ 7f4:	0e 94 cb 03 	call	0x796	; 0x796 <wait_lcd>
+
+//entry mode set 
+    
+    write_2Nib(0x06);
+ 7f8:	86 e0       	ldi	r24, 0x06	; 6
+ 7fa:	0e 94 bc 03 	call	0x778	; 0x778 <write_2Nib>
+    wait_lcd();		
+ 7fe:	0e 94 cb 03 	call	0x796	; 0x796 <wait_lcd>
+}
+ 802:	08 95       	ret
+
+00000804 <putchar_lcd>:
+void putchar_lcd(unsigned char data){
+	
+	setbit(CTRL,RS);
+ 804:	90 9a       	sbi	0x12, 0	; 18
+	write_2Nib(data);
+ 806:	0e 94 bc 03 	call	0x778	; 0x778 <write_2Nib>
+	wait_lcd();
+ 80a:	0e 94 cb 03 	call	0x796	; 0x796 <wait_lcd>
+}
+ 80e:	08 95       	ret
+
+00000810 <cursor_home>:
+void cursor_home(){
+	clearbit(CTRL,RS);
+ 810:	90 98       	cbi	0x12, 0	; 18
+	write_2Nib(0x03);
+ 812:	83 e0       	ldi	r24, 0x03	; 3
+ 814:	0e 94 bc 03 	call	0x778	; 0x778 <write_2Nib>
+	wait_lcd();
+ 818:	0e 94 cb 03 	call	0x796	; 0x796 <wait_lcd>
+}
+ 81c:	08 95       	ret
+
+0000081e <clear_lcd>:
+void clear_lcd(){
+	clearbit(CTRL,RS);
+ 81e:	90 98       	cbi	0x12, 0	; 18
+	write_2Nib(0x01);
+ 820:	81 e0       	ldi	r24, 0x01	; 1
+ 822:	0e 94 bc 03 	call	0x778	; 0x778 <write_2Nib>
+	wait_lcd();
+ 826:	0e 94 cb 03 	call	0x796	; 0x796 <wait_lcd>
+}
+ 82a:	08 95       	ret
+
+0000082c <movecursor>:
+void movecursor(uint8_t dong,uint8_t cot){
+	uint8_t x;
+	x=64*(dong-1)+(cot-1)+0x80;
+	clearbit(CTRL,RS);
+ 82c:	90 98       	cbi	0x12, 0	; 18
+	write_2Nib(0x01);
+	wait_lcd();
+}
+void movecursor(uint8_t dong,uint8_t cot){
+	uint8_t x;
+	x=64*(dong-1)+(cot-1)+0x80;
+ 82e:	82 95       	swap	r24
+ 830:	88 0f       	add	r24, r24
+ 832:	88 0f       	add	r24, r24
+ 834:	80 7c       	andi	r24, 0xC0	; 192
+ 836:	86 0f       	add	r24, r22
+	clearbit(CTRL,RS);
+	write_2Nib(x);
+ 838:	81 5c       	subi	r24, 0xC1	; 193
+ 83a:	0e 94 bc 03 	call	0x778	; 0x778 <write_2Nib>
+	wait_lcd();
+ 83e:	0e 94 cb 03 	call	0x796	; 0x796 <wait_lcd>
+}
+ 842:	08 95       	ret
+
+00000844 <count_number>:
+int count_number(unsigned int number){
+ 844:	bc 01       	movw	r22, r24
+	int dem=0;
+	if(number!=0) {
+ 846:	00 97       	sbiw	r24, 0x00	; 0
+ 848:	71 f0       	breq	.+28     	; 0x866 <__stack+0x7>
+ 84a:	20 e0       	ldi	r18, 0x00	; 0
+ 84c:	30 e0       	ldi	r19, 0x00	; 0
+	   while(number){
+		number=number/10;
+ 84e:	ea e0       	ldi	r30, 0x0A	; 10
+ 850:	f0 e0       	ldi	r31, 0x00	; 0
+ 852:	cb 01       	movw	r24, r22
+ 854:	bf 01       	movw	r22, r30
+ 856:	0e 94 76 04 	call	0x8ec	; 0x8ec <__udivmodhi4>
+		dem++;
+ 85a:	2f 5f       	subi	r18, 0xFF	; 255
+ 85c:	3f 4f       	sbci	r19, 0xFF	; 255
+	wait_lcd();
+}
+int count_number(unsigned int number){
+	int dem=0;
+	if(number!=0) {
+	   while(number){
+ 85e:	61 15       	cp	r22, r1
+ 860:	71 05       	cpc	r23, r1
+ 862:	b9 f7       	brne	.-18     	; 0x852 <count_number+0xe>
+ 864:	02 c0       	rjmp	.+4      	; 0x86a <__stack+0xb>
+		number=number/10;
+		dem++;
+	}	
+    } 
+	else dem=dem+1; 
+ 866:	21 e0       	ldi	r18, 0x01	; 1
+ 868:	30 e0       	ldi	r19, 0x00	; 0
+	while(number){
+		number=number/10;
+		dem++;
+	}
+	return dem;*/
+}
+ 86a:	82 2f       	mov	r24, r18
+ 86c:	93 2f       	mov	r25, r19
+ 86e:	08 95       	ret
+
+00000870 <printnumber_lcd>:
+void printnumber_lcd(uint8_t number){
+ 870:	1f 93       	push	r17
+		temp=temp/10;
+		putchar_lcd(a+48);
+	}*/
+		
+	int a,b,c,d,e;
+	    a=number/10;
+ 872:	6a e0       	ldi	r22, 0x0A	; 10
+ 874:	0e 94 6a 04 	call	0x8d4	; 0x8d4 <__udivmodqi4>
+ 878:	19 2f       	mov	r17, r25
+	    putchar_lcd(a+48);
+ 87a:	80 5d       	subi	r24, 0xD0	; 208
+ 87c:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+		//number=number%10000;
+	    b=number%10;
+	    putchar_lcd(b+48);
+ 880:	81 2f       	mov	r24, r17
+ 882:	80 5d       	subi	r24, 0xD0	; 208
+ 884:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+		putchar_lcd(d+48);
+		putchar_lcd(e+48);
+	}
+	*/
+			
+}
+ 888:	1f 91       	pop	r17
+ 88a:	08 95       	ret
+
+0000088c <putstr_lcd>:
+putstr_lcd(unsigned char *str, unsigned int lenght){
+ 88c:	ef 92       	push	r14
+ 88e:	ff 92       	push	r15
+ 890:	0f 93       	push	r16
+ 892:	1f 93       	push	r17
+ 894:	cf 93       	push	r28
+ 896:	df 93       	push	r29
+ 898:	7b 01       	movw	r14, r22
+	unsigned int i;
+	for(i=0;i<lenght;i++){
+ 89a:	61 15       	cp	r22, r1
+ 89c:	71 05       	cpc	r23, r1
+ 89e:	99 f0       	breq	.+38     	; 0x8c6 <putstr_lcd+0x3a>
+ 8a0:	08 2f       	mov	r16, r24
+ 8a2:	19 2f       	mov	r17, r25
+ 8a4:	c0 e0       	ldi	r28, 0x00	; 0
+ 8a6:	d0 e0       	ldi	r29, 0x00	; 0
+		if(*(str+i)>0){ 
+ 8a8:	f8 01       	movw	r30, r16
+ 8aa:	81 91       	ld	r24, Z+
+ 8ac:	8f 01       	movw	r16, r30
+ 8ae:	88 23       	and	r24, r24
+ 8b0:	19 f0       	breq	.+6      	; 0x8b8 <putstr_lcd+0x2c>
+			putchar_lcd(*(str+i));
+ 8b2:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+ 8b6:	03 c0       	rjmp	.+6      	; 0x8be <putstr_lcd+0x32>
+			}
+		else putchar_lcd(0);	
+ 8b8:	80 e0       	ldi	r24, 0x00	; 0
+ 8ba:	0e 94 02 04 	call	0x804	; 0x804 <putchar_lcd>
+	*/
+			
+}
+putstr_lcd(unsigned char *str, unsigned int lenght){
+	unsigned int i;
+	for(i=0;i<lenght;i++){
+ 8be:	21 96       	adiw	r28, 0x01	; 1
+ 8c0:	ce 15       	cp	r28, r14
+ 8c2:	df 05       	cpc	r29, r15
+ 8c4:	88 f3       	brcs	.-30     	; 0x8a8 <putstr_lcd+0x1c>
+		if(*(str+i)>0){ 
+			putchar_lcd(*(str+i));
+			}
+		else putchar_lcd(0);	
+}
+}
+ 8c6:	df 91       	pop	r29
+ 8c8:	cf 91       	pop	r28
+ 8ca:	1f 91       	pop	r17
+ 8cc:	0f 91       	pop	r16
+ 8ce:	ff 90       	pop	r15
+ 8d0:	ef 90       	pop	r14
+ 8d2:	08 95       	ret
+
+000008d4 <__udivmodqi4>:
+ 8d4:	99 1b       	sub	r25, r25
+ 8d6:	79 e0       	ldi	r23, 0x09	; 9
+ 8d8:	04 c0       	rjmp	.+8      	; 0x8e2 <__udivmodqi4_ep>
+
+000008da <__udivmodqi4_loop>:
+ 8da:	99 1f       	adc	r25, r25
+ 8dc:	96 17       	cp	r25, r22
+ 8de:	08 f0       	brcs	.+2      	; 0x8e2 <__udivmodqi4_ep>
+ 8e0:	96 1b       	sub	r25, r22
+
+000008e2 <__udivmodqi4_ep>:
+ 8e2:	88 1f       	adc	r24, r24
+ 8e4:	7a 95       	dec	r23
+ 8e6:	c9 f7       	brne	.-14     	; 0x8da <__udivmodqi4_loop>
+ 8e8:	80 95       	com	r24
+ 8ea:	08 95       	ret
+
+000008ec <__udivmodhi4>:
+ 8ec:	aa 1b       	sub	r26, r26
+ 8ee:	bb 1b       	sub	r27, r27
+ 8f0:	51 e1       	ldi	r21, 0x11	; 17
+ 8f2:	07 c0       	rjmp	.+14     	; 0x902 <__udivmodhi4_ep>
+
+000008f4 <__udivmodhi4_loop>:
+ 8f4:	aa 1f       	adc	r26, r26
+ 8f6:	bb 1f       	adc	r27, r27
+ 8f8:	a6 17       	cp	r26, r22
+ 8fa:	b7 07       	cpc	r27, r23
+ 8fc:	10 f0       	brcs	.+4      	; 0x902 <__udivmodhi4_ep>
+ 8fe:	a6 1b       	sub	r26, r22
+ 900:	b7 0b       	sbc	r27, r23
+
+00000902 <__udivmodhi4_ep>:
+ 902:	88 1f       	adc	r24, r24
+ 904:	99 1f       	adc	r25, r25
+ 906:	5a 95       	dec	r21
+ 908:	a9 f7       	brne	.-22     	; 0x8f4 <__udivmodhi4_loop>
+ 90a:	80 95       	com	r24
+ 90c:	90 95       	com	r25
+ 90e:	bc 01       	movw	r22, r24
+ 910:	cd 01       	movw	r24, r26
+ 912:	08 95       	ret
+
+00000914 <_exit>:
+ 914:	f8 94       	cli
+
+00000916 <__stop_program>:
+ 916:	ff cf       	rjmp	.-2      	; 0x916 <__stop_program>

@@ -1,0 +1,6 @@
+VERSION:3 SOURCE_TIMESTAMP:47538EED
+NODE:I LEVEL:0 LINE:24 "C:\cvavr2\inc\mega16.h"
+NODE:I LEVEL:0 LINE:25 "C:\cvavr2\inc\delay.h"
+NODE:I LEVEL:0 LINE:27 "C:\cvavr2\inc\stdio.h"
+NODE:F LEVEL:0 LINE:30 "truyen_du_lieu(unsigned char chr)"
+NODE:F LEVEL:0 LINE:34 "main(void)"

@@ -1,0 +1,6 @@
+main DSTACK_USAGE:16 DSTACK_LEVEL:16 FILE:"Main\main.c" LINE:20
+sprintf DSTACK_USAGE:14 DSTACK_LEVEL:30 FILE:"C:\Program Files\lib\stdio.lib" LINE:1410
+_print DSTACK_USAGE:94 DSTACK_LEVEL:124 FILE:"C:\Program Files\lib\stdio.lib" LINE:1162
+_ftoe DSTACK_USAGE:16 DSTACK_LEVEL:140 FILE:"C:\Program Files\lib\stdio.lib" LINE:1098
+floor DSTACK_USAGE:4 DSTACK_LEVEL:144 FILE:"C:\Program Files\lib\math.lib" LINE:659
+ftrunc DSTACK_USAGE:4 DSTACK_LEVEL:148 FILE:"C:\Program Files\lib\math.lib" LINE:544

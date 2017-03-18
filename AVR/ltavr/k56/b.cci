@@ -1,0 +1,12 @@
+VERSION:3 SOURCE_TIMESTAMP:474A0310
+NODE:I LEVEL:0 LINE:24 "C:\cvavr2\inc\mega16.h"
+NODE:I LEVEL:0 LINE:25 "C:\cvavr2\inc\math.h"
+NODE:I LEVEL:0 LINE:26 "C:\cvavr2\inc\delay.h"
+NODE:I LEVEL:0 LINE:29 "C:\cvavr2\inc\alcd.h"
+NODE:M LEVEL:0 LINE:31 "ADC_VREF_TYPE"
+NODE:F LEVEL:0 LINE:35 "read_adc(unsigned char adc_input)"
+NODE:F LEVEL:0 LINE:49 "giatri_hex(int n)"
+NODE:F LEVEL:0 LINE:62 "lcd_hienso(int n)"
+NODE:F LEVEL:0 LINE:72 "giatri_thapphan(int n)"
+NODE:F LEVEL:0 LINE:79 "hien_nhiphan(int n)"
+NODE:F LEVEL:0 LINE:93 "main(void)"
