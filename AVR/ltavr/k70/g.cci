@@ -1,5 +1,0 @@
-VERSION:3 SOURCE_TIMESTAMP:475B0355
-NODE:I LEVEL:0 LINE:24 "C:\cvavr2\inc\mega16.h"
-NODE:V LEVEL:0 LINE:27 "val -> RAM:????"
-NODE:F LEVEL:0 LINE:29 "timer1_compa_isr(void)"
-NODE:F LEVEL:0 LINE:46 "main(void)"
