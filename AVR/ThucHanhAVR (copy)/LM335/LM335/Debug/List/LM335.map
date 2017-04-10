@@ -1,0 +1,24 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+_seed                                                                             0x0160       4
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+LCD_write                                                                         0x00064     12
+LCD_init                                                                          0x00070      9
+Voltage_Display                                                                   0x00079     27
+Temp_Display                                                                      0x00094     16
+main                                                                              0x000A4     89
+ftrunc                                                                            0x000FD     49
+floor                                                                             0x0012E     23
+exp                                                                               0x00145    166

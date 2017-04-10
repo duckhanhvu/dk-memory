@@ -1,0 +1,7 @@
+VERSION:3 SOURCE_TIMESTAMP:4745BB2C
+NODE:I LEVEL:0 LINE:24 "C:\cvavr2\inc\mega16.h"
+NODE:I LEVEL:0 LINE:25 "C:\cvavr2\inc\math.h"
+NODE:I LEVEL:0 LINE:26 "C:\cvavr2\inc\stdlib.h"
+NODE:I LEVEL:0 LINE:28 "C:\cvavr2\inc\alcd.h"
+NODE:F LEVEL:0 LINE:31 "lCD_hienso(unsigned int n)"
+NODE:F LEVEL:0 LINE:47 "main(void)"

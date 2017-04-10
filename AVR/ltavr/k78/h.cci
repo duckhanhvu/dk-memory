@@ -1,0 +1,5 @@
+VERSION:3 SOURCE_TIMESTAMP:475CAD27
+NODE:I LEVEL:0 LINE:24 "C:\cvavr2\inc\mega16.h"
+NODE:I LEVEL:0 LINE:25 "C:\cvavr2\inc\delay.h"
+NODE:F LEVEL:0 LINE:27 "hienso(int n)"
+NODE:F LEVEL:0 LINE:46 "main(void)"

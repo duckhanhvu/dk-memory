@@ -1,0 +1,664 @@
+Archive member included because of file (symbol)
+
+d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+                              lib/lcd/lcd_hd44780_avr.o (__divmodhi4)
+d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+                              d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4/crtm8.o (exit)
+d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+                              main.o (__do_copy_data)
+d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+                              lib/keypad/keypad.o (__do_clear_bss)
+d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+                              d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+
+Allocating common symbols
+Common symbol       size              file
+
+KeypadCmdQ          0x20              lib/keypad/keypad.o
+KeyState            0x4               lib/keypad/keypad.o
+KeyPrevState        0x4               lib/keypad/keypad.o
+KeyBuffer           0xc               lib/keypad/keypad.o
+KeyRepeatWait       0x4               lib/keypad/keypad.o
+KeyRepeatRate       0x4               lib/keypad/keypad.o
+key                 0x1               lib/keypad/keypad.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4/crtm8.o
+ .bss           0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4/crtm8.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 lib/keypad/keypad.o
+ .data          0x00000000        0x0 lib/keypad/keypad.o
+ .bss           0x00000000        0x0 lib/keypad/keypad.o
+ .text.GetRawKeyState
+                0x00000000       0x2c lib/keypad/keypad.o
+ .text.MajorVote
+                0x00000000       0x32 lib/keypad/keypad.o
+ .text          0x00000000        0x0 lib/lcd/lcd_hd44780_avr.o
+ .data          0x00000000        0x0 lib/lcd/lcd_hd44780_avr.o
+ .bss           0x00000000        0x0 lib/lcd/lcd_hd44780_avr.o
+ .text          0x00000000        0x0 lib/rtcc/clock.o
+ .data          0x00000000        0x0 lib/rtcc/clock.o
+ .bss           0x00000000        0x0 lib/rtcc/clock.o
+ .data.PREV_PINC
+                0x00000000        0x1 lib/rtcc/clock.o
+ .text          0x00000000        0x0 lib/rtcc/ds1307.o
+ .data          0x00000000        0x0 lib/rtcc/ds1307.o
+ .bss           0x00000000        0x0 lib/rtcc/ds1307.o
+ .text          0x00000000        0x0 lib/rtcc/I2C.o
+ .data          0x00000000        0x0 lib/rtcc/I2C.o
+ .bss           0x00000000        0x0 lib/rtcc/I2C.o
+ .text.I2CClose
+                0x00000000        0x8 lib/rtcc/I2C.o
+ .text          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+ .data          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+ .text.libgcc   0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+ .text          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+ .data          0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4/crtm8.o
+LOAD main.o
+LOAD lib/keypad/keypad.o
+LOAD lib/lcd/lcd_hd44780_avr.o
+LOAD lib/rtcc/clock.o
+LOAD lib/rtcc/ds1307.o
+LOAD lib/rtcc/I2C.o
+START GROUP
+LOAD d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4\libm.a
+END GROUP
+START GROUP
+LOAD d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a
+LOAD d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4\libm.a
+LOAD d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4\libc.a
+END GROUP
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1252
+ *(.vectors)
+ .vectors       0x00000000       0x26 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4/crtm8.o
+                0x00000000                __vector_default
+                0x00000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x00000026                . = ALIGN (0x2)
+                0x00000026                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000026        0x0 linker stubs
+ *(.trampolines*)
+                0x00000026                __trampolines_end = .
+ *(.progmem*)
+ .progmem.data.__c.1804
+                0x00000026        0xe main.o
+ .progmem.data.__c.1800
+                0x00000034        0xe main.o
+ .progmem.data.__c.1798
+                0x00000042        0xc main.o
+                0x0000004e                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000004e                __ctors_start = .
+ *(.ctors)
+                0x0000004e                __ctors_end = .
+                0x0000004e                __dtors_start = .
+ *(.dtors)
+                0x0000004e                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000004e        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4/crtm8.o
+                0x0000004e                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000004e        0xc d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4/crtm8.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000005a       0x16 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_copy_data.o)
+                0x0000005a                __do_copy_data
+ .init4         0x00000070       0x10 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_clear_bss.o)
+                0x00000070                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000080        0x4 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4/crtm8.o
+ *(.init9)
+ *(.text)
+ .text          0x00000084        0x2 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/../../../../avr/lib/avr4/crtm8.o
+                0x00000084                __vector_1
+                0x00000084                __vector_12
+                0x00000084                __bad_interrupt
+                0x00000084                __vector_6
+                0x00000084                __vector_3
+                0x00000084                __vector_11
+                0x00000084                __vector_13
+                0x00000084                __vector_17
+                0x00000084                __vector_7
+                0x00000084                __vector_5
+                0x00000084                __vector_4
+                0x00000084                __vector_2
+                0x00000084                __vector_15
+                0x00000084                __vector_8
+                0x00000084                __vector_14
+                0x00000084                __vector_10
+                0x00000084                __vector_16
+                0x00000084                __vector_18
+                0x00000086                . = ALIGN (0x2)
+ *(.text.*)
+ .text.SetTime  0x00000086      0x20a main.o
+                0x00000086                SetTime
+ .text.startup.main
+                0x00000290       0xc6 main.o
+                0x00000290                main
+ .text.KeypadInit
+                0x00000356       0x70 lib/keypad/keypad.o
+                0x00000356                KeypadInit
+ .text.__vector_9
+                0x000003c6      0x21e lib/keypad/keypad.o
+                0x000003c6                __vector_9
+ .text.GetKeypadCmd
+                0x000005e4       0x64 lib/keypad/keypad.o
+                0x000005e4                GetKeypadCmd
+ .text.LCDBusyLoop
+                0x00000648       0x66 lib/lcd/lcd_hd44780_avr.o
+                0x00000648                LCDBusyLoop
+ .text.LCDByte  0x000006ae       0x60 lib/lcd/lcd_hd44780_avr.o
+                0x000006ae                LCDByte
+ .text.LCDInit  0x0000070e      0x242 lib/lcd/lcd_hd44780_avr.o
+                0x0000070e                LCDInit
+ .text.LCDWriteString
+                0x00000950      0x16c lib/lcd/lcd_hd44780_avr.o
+                0x00000950                LCDWriteString
+ .text.LCDWriteFString
+                0x00000abc      0x160 lib/lcd/lcd_hd44780_avr.o
+                0x00000abc                LCDWriteFString
+ .text.LCDWriteInt
+                0x00000c1c      0x1a8 lib/lcd/lcd_hd44780_avr.o
+                0x00000c1c                LCDWriteInt
+ .text.LCDGotoXY
+                0x00000dc4       0x76 lib/lcd/lcd_hd44780_avr.o
+                0x00000dc4                LCDGotoXY
+ .text.ClockInit
+                0x00000e3a       0x54 lib/rtcc/clock.o
+                0x00000e3a                ClockInit
+ .text.GetSecond
+                0x00000e8e       0x34 lib/rtcc/clock.o
+                0x00000e8e                GetSecond
+ .text.GetMinute
+                0x00000ec2       0x34 lib/rtcc/clock.o
+                0x00000ec2                GetMinute
+ .text.GetHour  0x00000ef6       0x32 lib/rtcc/clock.o
+                0x00000ef6                GetHour
+ .text.GetAmPm  0x00000f28       0x32 lib/rtcc/clock.o
+                0x00000f28                GetAmPm
+ .text.SetSecond
+                0x00000f5a       0x26 lib/rtcc/clock.o
+                0x00000f5a                SetSecond
+ .text.SetMinute
+                0x00000f80       0x26 lib/rtcc/clock.o
+                0x00000f80                SetMinute
+ .text.SetHour  0x00000fa6       0x60 lib/rtcc/clock.o
+                0x00000fa6                SetHour
+ .text.SetAmPm  0x00001006       0x42 lib/rtcc/clock.o
+                0x00001006                SetAmPm
+ .text.GetTimeString
+                0x00001048       0xb6 lib/rtcc/clock.o
+                0x00001048                GetTimeString
+ .text.DS1307Read
+                0x000010fe       0x40 lib/rtcc/ds1307.o
+                0x000010fe                DS1307Read
+ .text.DS1307Write
+                0x0000113e       0x30 lib/rtcc/ds1307.o
+                0x0000113e                DS1307Write
+ .text.I2CInit  0x0000116e       0x12 lib/rtcc/I2C.o
+                0x0000116e                I2CInit
+ .text.I2CStart
+                0x00001180        0xc lib/rtcc/I2C.o
+                0x00001180                I2CStart
+ .text.I2CStop  0x0000118c        0xc lib/rtcc/I2C.o
+                0x0000118c                I2CStop
+ .text.I2CWriteByte
+                0x00001198       0x2e lib/rtcc/I2C.o
+                0x00001198                I2CWriteByte
+ .text.I2CReadByte
+                0x000011c6       0x3a lib/rtcc/I2C.o
+                0x000011c6                I2CReadByte
+ .text.libgcc.div
+                0x00001200       0x26 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_divmodhi4.o)
+                0x00001200                _div
+                0x00001200                __divmodhi4
+ .text.libgcc.div
+                0x00001226       0x28 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_udivmodhi4.o)
+                0x00001226                __udivmodhi4
+                0x0000124e                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000124e        0x0 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+                0x0000124e                _exit
+                0x0000124e                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000124e        0x4 d:/program files (x86)/atmel/atmel toolchain/avr8 gcc/native/3.4.1061/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.8.1/avr4\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001252                _etext = .
+
+.data           0x00800060       0xb6 load address 0x00001252
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ *(.data*)
+ .data.KeypadQEnd
+                0x00800060        0x1 lib/keypad/keypad.o
+                0x00800060                KeypadQEnd
+ .data.KeypadQFront
+                0x00800061        0x1 lib/keypad/keypad.o
+                0x00800061                KeypadQFront
+ .data.__cgram  0x00800062       0x40 lib/lcd/lcd_hd44780_avr.o
+                0x00800062                __cgram
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x008000a2       0x74 main.o
+                                 0x7c (size before relaxing)
+ *(.gnu.linkonce.d*)
+                0x00800116                . = ALIGN (0x2)
+                0x00800116                _edata = .
+                0x00800116                PROVIDE (__data_end, .)
+
+.bss            0x00800116       0x3e
+                0x00800116                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.n.1490    0x00800116        0x1 lib/keypad/keypad.o
+ *(COMMON)
+ COMMON         0x00800117       0x3d lib/keypad/keypad.o
+                0x00800117                KeypadCmdQ
+                0x00800137                KeyState
+                0x0080013b                KeyPrevState
+                0x0080013f                KeyBuffer
+                0x0080014b                KeyRepeatWait
+                0x0080014f                KeyRepeatRate
+                0x00800153                key
+                0x00800154                PROVIDE (__bss_end, .)
+                0x00001252                __data_load_start = LOADADDR (.data)
+                0x00001308                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800154        0x0
+                0x00800154                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800154                PROVIDE (__noinit_end, .)
+                0x00800154                _end = .
+                0x00800154                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x30
+ *(.comment)
+ .comment       0x00000000       0x30 main.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000000       0x31 lib/keypad/keypad.o
+ .comment       0x00000000       0x31 lib/lcd/lcd_hd44780_avr.o
+ .comment       0x00000000       0x31 lib/rtcc/clock.o
+ .comment       0x00000000       0x31 lib/rtcc/ds1307.o
+ .comment       0x00000000       0x31 lib/rtcc/I2C.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x190
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 main.o
+ .debug_aranges
+                0x00000028       0x40 lib/keypad/keypad.o
+ .debug_aranges
+                0x00000068       0x50 lib/lcd/lcd_hd44780_avr.o
+ .debug_aranges
+                0x000000b8       0x68 lib/rtcc/clock.o
+ .debug_aranges
+                0x00000120       0x28 lib/rtcc/ds1307.o
+ .debug_aranges
+                0x00000148       0x48 lib/rtcc/I2C.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x3356
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x8e7 main.o
+ .debug_info    0x000008e7      0x2d2 lib/keypad/keypad.o
+ .debug_info    0x00000bb9     0x1eda lib/lcd/lcd_hd44780_avr.o
+ .debug_info    0x00002a93      0x576 lib/rtcc/clock.o
+ .debug_info    0x00003009      0x21d lib/rtcc/ds1307.o
+ .debug_info    0x00003226      0x130 lib/rtcc/I2C.o
+
+.debug_abbrev   0x00000000      0x977
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1fa main.o
+ .debug_abbrev  0x000001fa      0x165 lib/keypad/keypad.o
+ .debug_abbrev  0x0000035f      0x29b lib/lcd/lcd_hd44780_avr.o
+ .debug_abbrev  0x000005fa      0x20a lib/rtcc/clock.o
+ .debug_abbrev  0x00000804       0xe1 lib/rtcc/ds1307.o
+ .debug_abbrev  0x000008e5       0x92 lib/rtcc/I2C.o
+
+.debug_line     0x00000000     0x1071
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000      0x24e main.o
+ .debug_line    0x0000024e      0x1c9 lib/keypad/keypad.o
+ .debug_line    0x00000417      0x87c lib/lcd/lcd_hd44780_avr.o
+ .debug_line    0x00000c93      0x1b8 lib/rtcc/clock.o
+ .debug_line    0x00000e4b       0xea lib/rtcc/ds1307.o
+ .debug_line    0x00000f35      0x13c lib/rtcc/I2C.o
+
+.debug_frame    0x00000000      0x460
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x80 main.o
+ .debug_frame   0x00000080       0xe8 lib/keypad/keypad.o
+ .debug_frame   0x00000168       0xe0 lib/lcd/lcd_hd44780_avr.o
+ .debug_frame   0x00000248      0x154 lib/rtcc/clock.o
+ .debug_frame   0x0000039c       0x50 lib/rtcc/ds1307.o
+ .debug_frame   0x000003ec       0x74 lib/rtcc/I2C.o
+
+.debug_str      0x00000000      0x449
+ *(.debug_str)
+ .debug_str     0x00000000      0x287 main.o
+                                0x2cc (size before relaxing)
+ .debug_str     0x00000287       0xa6 lib/keypad/keypad.o
+                                0x23e (size before relaxing)
+ .debug_str     0x0000032d       0x7d lib/lcd/lcd_hd44780_avr.o
+                                0x28d (size before relaxing)
+ .debug_str     0x000003aa       0x3d lib/rtcc/clock.o
+                                0x225 (size before relaxing)
+ .debug_str     0x000003e7       0x47 lib/rtcc/ds1307.o
+                                0x1c5 (size before relaxing)
+ .debug_str     0x0000042e       0x1b lib/rtcc/I2C.o
+                                0x1b4 (size before relaxing)
+
+.debug_loc      0x00000000     0x2a61
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x309 main.o
+ .debug_loc     0x00000309      0x317 lib/keypad/keypad.o
+ .debug_loc     0x00000620     0x1bfc lib/lcd/lcd_hd44780_avr.o
+ .debug_loc     0x0000221c      0x5f9 lib/rtcc/clock.o
+ .debug_loc     0x00002815      0x1c9 lib/rtcc/ds1307.o
+ .debug_loc     0x000029de       0x83 lib/rtcc/I2C.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x00000000      0x280
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x30 main.o
+ .debug_ranges  0x00000030       0x90 lib/keypad/keypad.o
+ .debug_ranges  0x000000c0      0x118 lib/lcd/lcd_hd44780_avr.o
+ .debug_ranges  0x000001d8       0x58 lib/rtcc/clock.o
+ .debug_ranges  0x00000230       0x18 lib/rtcc/ds1307.o
+ .debug_ranges  0x00000248       0x38 lib/rtcc/I2C.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(DS1307Demo.elf elf32-avr)
+LOAD linker stubs

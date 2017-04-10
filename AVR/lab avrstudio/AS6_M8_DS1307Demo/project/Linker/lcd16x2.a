@@ -1,0 +1,395 @@
+;/*****************************************************************************
+;  *Ten Tep          :     lcd16x2.h
+;  *Ngay             :     14/03/2014
+;  *Tac Gia          :     MinhHa R&D Team
+;  *Cong Ty          :     MinhHaGroup
+;  *Webside          :     mcu.banlinhkien.vn
+;  *Phien Ban        :     V1.0
+;  *Tom Tat          :     Dinh nghia cac ham giao tiep LCD16x2
+;  ******************************************************************************
+;  * Chu Y : Phai dinh nghia cac chan su dung cho LCD16X2 vao file main.h
+;  * Vi Du :
+;   // khai bao chan LCD16x2 TREN KIT AVR V2
+;   #define     LCD16X2_RS     PORTB_1
+;   #define     LCD16X2_RW     PORTC_2
+;   #define     LCD16X2_EN     PORTC_3
+;   #define     LCD16X2_D4     PORTD_4
+;   #define     LCD16X2_D5     PORTD_5
+;   #define     LCD16X2_D6     PORTD_6
+;   #define     LCD16X2_D7     PORTD_7
+;  ******************************************************************************
+;**/
+;/*********************************** VI DU ************************************
+;   // khai bao 1 mang ki tu dung cho LCD16X2
+;   uint8_t str[16];
+;   // cac tham bien khac
+;   uint8_t Do_am;
+;   //Khoi tao LCD16X2
+;   LCD16X2_Init();
+;   // hien thi 1 chuoi ki tu
+;   sprintf(str,"BanLinhKien.Vn");
+;   LCD16X2_Puts(str);
+;   sprintf(str,"Do Am: %u",Do_am);
+;   LCD16X2_Gotoxy(0,1);
+;   LCD16X2_Puts(str);
+;*******************************************************************************/
+;#include "User\Include\lcd16x2.h"
+;PCODE: $00000000 VOL: 0
+	#ifndef __SLEEP_DEFINED__
+;PCODE: $00000001 VOL: 0
+	#define __SLEEP_DEFINED__
+;PCODE: $00000002 VOL: 0
+	.EQU __se_bit=0x40
+;PCODE: $00000003 VOL: 0
+	.EQU __sm_mask=0xB0
+;PCODE: $00000004 VOL: 0
+	.EQU __sm_powerdown=0x20
+;PCODE: $00000005 VOL: 0
+	.EQU __sm_powersave=0x30
+;PCODE: $00000006 VOL: 0
+	.EQU __sm_standby=0xA0
+;PCODE: $00000007 VOL: 0
+	.EQU __sm_ext_standby=0xB0
+;PCODE: $00000008 VOL: 0
+	.EQU __sm_adc_noise_red=0x10
+;PCODE: $00000009 VOL: 0
+	.SET power_ctrl_reg=mcucr
+;PCODE: $0000000A VOL: 0
+	#endif
+;PCODE: $0000000B VOL: 0
+;PCODE: $0000000C VOL: 0
+;
+;#if (__LCD16X2_H!=14032014)
+;    #error "Include Sai File lcd16x2.h"
+;#endif
+;
+;/*------------------------------------------------------------------------------
+;Noi Dung    :   Gui tin hieu Enable den LCD16X2.
+;Tham Bien   :   Khong.
+;Tra Ve      :   Khong.
+; -------------------------------------------------------------------------------*/
+;
+;void LCD16X2_Enable(void)
+; 0001 0031 {
+
+	.CSEG
+;PCODE: $0000000D VOL: 0
+;PCODE: $0000000E VOL: 0
+; 0001 0032 	LCD16X2_EN=1;
+;PCODE: $0000000F VOL: 0
+;PCODE: $00000010 VOL: 0
+; 0001 0033 	delay_us(3);
+;PCODE: $00000011 VOL: 0
+; 0001 0034 	LCD16X2_EN=0;
+;PCODE: $00000012 VOL: 0
+;PCODE: $00000013 VOL: 0
+; 0001 0035 	delay_us(50);
+;PCODE: $00000014 VOL: 0
+; 0001 0036 }
+;PCODE: $00000015 VOL: 0
+;PCODE: $00000016 VOL: 0
+;
+;/*------------------------------------------------------------------------------
+;Noi Dung    :   Gui 4 bit du lieu den LCD16X2.
+;Tham Bien   :   Data: 4 bit thap cua Data chua 4 bit du lieu can gui.
+;Tra Ve      :   Khong.
+; -------------------------------------------------------------------------------*/
+;
+;void LCD16X2_Send4Bit(uint8_t Data)
+; 0001 003F {
+;PCODE: $00000017 VOL: 0
+;PCODE: $00000018 VOL: 0
+; 0001 0040 	LCD16X2_D4=((Data&0x01)==0x01);
+;	Data -> Y+0
+;PCODE: $00000019 VOL: 0
+;PCODE: $0000001A VOL: 0
+;PCODE: $0000001B VOL: 0
+;PCODE: $0000001C VOL: 0
+;PCODE: $0000001D VOL: 0
+;PCODE: $0000001E VOL: 0
+;PCODE: $0000001F VOL: 0
+;PCODE: $00000020 VOL: 0
+;PCODE: $00000021 VOL: 0
+;PCODE: $00000022 VOL: 0
+;PCODE: $00000023 VOL: 0
+;PCODE: $00000024 VOL: 0
+;PCODE: $00000025 VOL: 0
+; 0001 0041 	LCD16X2_D5=((Data&0x02)==0x02);
+;PCODE: $00000026 VOL: 0
+;PCODE: $00000027 VOL: 0
+;PCODE: $00000028 VOL: 0
+;PCODE: $00000029 VOL: 0
+;PCODE: $0000002A VOL: 0
+;PCODE: $0000002B VOL: 0
+;PCODE: $0000002C VOL: 0
+;PCODE: $0000002D VOL: 0
+;PCODE: $0000002E VOL: 0
+;PCODE: $0000002F VOL: 0
+;PCODE: $00000030 VOL: 0
+;PCODE: $00000031 VOL: 0
+;PCODE: $00000032 VOL: 0
+; 0001 0042 	LCD16X2_D6=((Data&0x04)==0x04);
+;PCODE: $00000033 VOL: 0
+;PCODE: $00000034 VOL: 0
+;PCODE: $00000035 VOL: 0
+;PCODE: $00000036 VOL: 0
+;PCODE: $00000037 VOL: 0
+;PCODE: $00000038 VOL: 0
+;PCODE: $00000039 VOL: 0
+;PCODE: $0000003A VOL: 0
+;PCODE: $0000003B VOL: 0
+;PCODE: $0000003C VOL: 0
+;PCODE: $0000003D VOL: 0
+;PCODE: $0000003E VOL: 0
+;PCODE: $0000003F VOL: 0
+; 0001 0043 	LCD16X2_D7=((Data&0x08)==0x08);
+;PCODE: $00000040 VOL: 0
+;PCODE: $00000041 VOL: 0
+;PCODE: $00000042 VOL: 0
+;PCODE: $00000043 VOL: 0
+;PCODE: $00000044 VOL: 0
+;PCODE: $00000045 VOL: 0
+;PCODE: $00000046 VOL: 0
+;PCODE: $00000047 VOL: 0
+;PCODE: $00000048 VOL: 0
+;PCODE: $00000049 VOL: 0
+;PCODE: $0000004A VOL: 0
+;PCODE: $0000004B VOL: 0
+;PCODE: $0000004C VOL: 0
+; 0001 0044 }
+;PCODE: $0000004D VOL: 0
+;PCODE: $0000004E VOL: 0
+;PCODE: $0000004F VOL: 0
+;
+;/*------------------------------------------------------------------------------
+;Noi Dung    :   Gui 1 byte du lieu den LCD16X2.
+;Tham Bien   :   command: lenh can ghi
+;Tra Ve      :   Khong.
+;vi du       :   LCD16X2_SendCommand (0x01);
+; -------------------------------------------------------------------------------*/
+;
+;void LCD16X2_SendCommand(uint8_t Command)
+; 0001 004E {
+;PCODE: $00000050 VOL: 0
+;PCODE: $00000051 VOL: 0
+; 0001 004F 	LCD16X2_Send4Bit(Command>>4);   /* Gui 4 bit cao */
+;	Command -> Y+0
+;PCODE: $00000052 VOL: 0
+;PCODE: $00000053 VOL: 0
+;PCODE: $00000054 VOL: 0
+;PCODE: $00000055 VOL: 0
+;PCODE: $00000056 VOL: 0
+; 0001 0050 	LCD16X2_Enable() ;
+;PCODE: $00000057 VOL: 0
+; 0001 0051 	LCD16X2_Send4Bit(Command);      /* Gui 4 bit thap*/
+;PCODE: $00000058 VOL: 0
+;PCODE: $00000059 VOL: 0
+;PCODE: $0000005A VOL: 0
+; 0001 0052 	LCD16X2_Enable() ;
+;PCODE: $0000005B VOL: 0
+; 0001 0053 }
+;PCODE: $0000005C VOL: 0
+;PCODE: $0000005D VOL: 0
+;PCODE: $0000005E VOL: 0
+;
+;/*------------------------------------------------------------------------------
+;Noi Dung    :   Khoi tao LCD16X2.
+;Tham Bien   :   Khong.
+;Tra Ve      :   Khong.
+; -------------------------------------------------------------------------------*/
+;
+;void LCD16X2_Init(void)
+; 0001 005C {
+;PCODE: $0000005F VOL: 0
+;PCODE: $00000060 VOL: 0
+; 0001 005D 	LCD16X2_Send4Bit(0x00);
+;PCODE: $00000061 VOL: 0
+;PCODE: $00000062 VOL: 0
+;PCODE: $00000063 VOL: 0
+; 0001 005E 	delay_ms(20);
+;PCODE: $00000064 VOL: 0
+;PCODE: $00000065 VOL: 0
+;PCODE: $00000066 VOL: 0
+; 0001 005F 	LCD16X2_RS=0;
+;PCODE: $00000067 VOL: 0
+;PCODE: $00000068 VOL: 0
+; 0001 0060 	LCD16X2_RW=0;
+;PCODE: $00000069 VOL: 0
+;PCODE: $0000006A VOL: 0
+; 0001 0061 	LCD16X2_Send4Bit(0x03);
+;PCODE: $0000006B VOL: 0
+;PCODE: $0000006C VOL: 0
+;PCODE: $0000006D VOL: 0
+; 0001 0062 	LCD16X2_Enable();
+;PCODE: $0000006E VOL: 0
+; 0001 0063 	delay_ms(5);
+;PCODE: $0000006F VOL: 0
+;PCODE: $00000070 VOL: 0
+;PCODE: $00000071 VOL: 0
+; 0001 0064 	LCD16X2_Enable();
+;PCODE: $00000072 VOL: 0
+; 0001 0065 	delay_us(100);
+;PCODE: $00000073 VOL: 0
+; 0001 0066 	LCD16X2_Enable();
+;PCODE: $00000074 VOL: 0
+; 0001 0067 	LCD16X2_Send4Bit(0x02);
+;PCODE: $00000075 VOL: 0
+;PCODE: $00000076 VOL: 0
+;PCODE: $00000077 VOL: 0
+; 0001 0068 	LCD16X2_Enable();
+;PCODE: $00000078 VOL: 0
+; 0001 0069 	LCD16X2_SendCommand( 0x28);        // giao thuc 4 bit, hien thi 2 hang, ki tu 5x7
+;PCODE: $00000079 VOL: 0
+;PCODE: $0000007A VOL: 0
+;PCODE: $0000007B VOL: 0
+; 0001 006A 	LCD16X2_SendCommand( 0x0c);        // cho phep hien thi man hinh
+;PCODE: $0000007C VOL: 0
+;PCODE: $0000007D VOL: 0
+;PCODE: $0000007E VOL: 0
+; 0001 006B 	LCD16X2_SendCommand( 0x06);        // tang ID, khong dich khung hinh
+;PCODE: $0000007F VOL: 0
+;PCODE: $00000080 VOL: 0
+;PCODE: $00000081 VOL: 0
+; 0001 006C 	LCD16X2_Clear();                   // xoa toan bo khung hinh
+;PCODE: $00000082 VOL: 0
+; 0001 006D }
+;PCODE: $00000083 VOL: 0
+;PCODE: $00000084 VOL: 0
+;
+;/*------------------------------------------------------------------------------
+;Noi Dung    :   Thiet lap vi tri con tro LCD16X2.
+;Tham Bien   :   x: vi tri cot cua con tro. x = 0 - 15.
+;                y: vi tri hang cua con tro. y= 0,1.
+;Tra Ve      :   Khong.
+;Vi du       :   LCD16X2_Gotoxy(0,0);
+; -------------------------------------------------------------------------------*/
+;
+;void LCD16X2_Gotoxy(uint8_t  x, uint8_t  y)
+; 0001 0078 {
+;PCODE: $00000085 VOL: 0
+;PCODE: $00000086 VOL: 0
+; 0001 0079 	uint8_t  address;
+; 0001 007A 	if(!y)
+;PCODE: $00000087 VOL: 0
+;	x -> Y+2
+;	y -> Y+1
+;	address -> R17
+;PCODE: $00000088 VOL: 0
+;PCODE: $00000089 VOL: 0
+;PCODE: $0000008A VOL: 0
+; 0001 007B 		address = (0x80+x);
+;PCODE: $0000008B VOL: 0
+;PCODE: $0000008C VOL: 0
+;PCODE: $0000008D VOL: 0
+; 0001 007C 	else
+;PCODE: $0000008E VOL: 0
+;PCODE: $0000008F VOL: 0
+; 0001 007D 		address = (0xC0+x);
+;PCODE: $00000090 VOL: 0
+;PCODE: $00000091 VOL: 0
+;PCODE: $00000092 VOL: 0
+; 0001 007E 	delay_ms(1);
+;PCODE: $00000093 VOL: 0
+;PCODE: $00000094 VOL: 0
+;PCODE: $00000095 VOL: 0
+;PCODE: $00000096 VOL: 0
+; 0001 007F 	LCD16X2_SendCommand(address);
+;PCODE: $00000097 VOL: 0
+;PCODE: $00000098 VOL: 0
+; 0001 0080 	delay_ms(5);
+;PCODE: $00000099 VOL: 0
+;PCODE: $0000009A VOL: 0
+;PCODE: $0000009B VOL: 0
+; 0001 0081 }
+;PCODE: $0000009C VOL: 0
+;PCODE: $0000009D VOL: 0
+;PCODE: $0000009E VOL: 0
+;PCODE: $0000009F VOL: 0
+;PCODE: $000000A0 VOL: 0
+;
+;/*------------------------------------------------------------------------------
+;Noi Dung    :   Xoa noi dung hien thi tren LCD16X2.
+;Tham Bien   :   Khong.
+;Tra Ve      :   Khong.
+; -------------------------------------------------------------------------------*/
+;
+;void LCD16X2_Clear(void)
+; 0001 008A {
+;PCODE: $000000A1 VOL: 0
+;PCODE: $000000A2 VOL: 0
+; 0001 008B 	LCD16X2_SendCommand(0x01);
+;PCODE: $000000A3 VOL: 0
+;PCODE: $000000A4 VOL: 0
+;PCODE: $000000A5 VOL: 0
+; 0001 008C 	delay_ms(5);
+;PCODE: $000000A6 VOL: 0
+;PCODE: $000000A7 VOL: 0
+;PCODE: $000000A8 VOL: 0
+; 0001 008D }
+;PCODE: $000000A9 VOL: 0
+;PCODE: $000000AA VOL: 0
+;
+;/*------------------------------------------------------------------------------
+;Noi Dung    :   Viet 1 ki tu len LCD16X2.
+;Tham Bien   :   Data  :   Gia tri ki tu can hien thi.
+;Tra Ve      :   Khong.
+; -------------------------------------------------------------------------------*/
+;void LCD16X2_PutChar(uint8_t Data)
+; 0001 0095 {
+;PCODE: $000000AB VOL: 0
+;PCODE: $000000AC VOL: 0
+; 0001 0096 	LCD16X2_RS=1;
+;	Data -> Y+0
+;PCODE: $000000AD VOL: 0
+;PCODE: $000000AE VOL: 0
+; 0001 0097 	LCD16X2_SendCommand( Data );
+;PCODE: $000000AF VOL: 0
+;PCODE: $000000B0 VOL: 0
+;PCODE: $000000B1 VOL: 0
+; 0001 0098 	LCD16X2_RS=0;
+;PCODE: $000000B2 VOL: 0
+;PCODE: $000000B3 VOL: 0
+; 0001 0099 }
+;PCODE: $000000B4 VOL: 0
+;PCODE: $000000B5 VOL: 0
+;PCODE: $000000B6 VOL: 0
+;
+;/*------------------------------------------------------------------------------
+;Noi Dung    :   Viet 1 chuoi ki tu len LCD16X2.
+;Tham Bien   :   *s    :   chuoi du lieu can hien thi.
+;Tra Ve      :   Khong.
+; -------------------------------------------------------------------------------*/
+;void LCD16X2_Puts(uint8_t *s)
+; 0001 00A1 {
+;PCODE: $000000B7 VOL: 0
+;PCODE: $000000B8 VOL: 0
+; 0001 00A2 	while (*s)
+;	*s -> Y+0
+;PCODE: $000000B9 VOL: 0
+;PCODE: $000000BA VOL: 0
+;PCODE: $000000BB VOL: 0
+;PCODE: $000000BC VOL: 0
+;PCODE: $000000BD VOL: 0
+; 0001 00A3 	{
+; 0001 00A4 		LCD16X2_PutChar(*s);
+;PCODE: $000000BE VOL: 0
+;PCODE: $000000BF VOL: 0
+;PCODE: $000000C0 VOL: 0
+;PCODE: $000000C1 VOL: 0
+; 0001 00A5 		s++;
+;PCODE: $000000C2 VOL: 0
+;PCODE: $000000C3 VOL: 0
+;PCODE: $000000C4 VOL: 0
+; 0001 00A6 	}
+;PCODE: $000000C5 VOL: 0
+;PCODE: $000000C6 VOL: 0
+; 0001 00A7 }
+;PCODE: $000000C7 VOL: 0
+;PCODE: $000000C8 VOL: 0
+;PCODE: $000000C9 VOL: 0
+;/*------------------------------KET THUC FILE-------------------------------
+; ______________________________MinhHa R&D Temp______________________________*/
+;
+;
+;
+;
