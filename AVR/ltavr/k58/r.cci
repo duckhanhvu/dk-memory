@@ -1,6 +1,0 @@
-VERSION:3 SOURCE_TIMESTAMP:4752BCB9
-NODE:I LEVEL:0 LINE:24 "C:\cvavr2\inc\mega16.h"
-NODE:I LEVEL:0 LINE:27 "C:\cvavr2\inc\stdio.h"
-NODE:I LEVEL:0 LINE:28 "C:\cvavr2\inc\delay.h"
-NODE:F LEVEL:0 LINE:30 "uart_char_tx(unsigned char chr)"
-NODE:F LEVEL:0 LINE:35 "main(void)"
