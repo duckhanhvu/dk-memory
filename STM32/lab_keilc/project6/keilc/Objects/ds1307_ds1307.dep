@@ -1,0 +1,244 @@
+Dependencies for Project 'ds1307', Target 'ds1307': (DO NOT MODIFY !)
+F (..\CMSIS\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.c)(0x51FA455A)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I..\CMSIS\Device\ST\STM32F0xx\Include -I..\keilc -I..\STM32F0xx_StdPeriph_Driver\inc-I "D:\EMBEDDED\embedded mcu\STM32\PROJECT-ST\project6\keilc\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DSTM32F030x8 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\system_stm32f0xx.o --omf_browse .\objects\system_stm32f0xx.crf --depend .\objects\system_stm32f0xx.d)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x51FA455A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0.h)(0x55094A14)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C253C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55094A14)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55094A14)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x51FA455A)
+I (..\keilc\stm32f0xx_conf.h)(0x51FA4594)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x51FA4574)
+F (..\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x51FA455A)()
+F (..\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x51FA455A)()
+F (.\stm32f0xx_conf.h)(0x51FA4594)()
+F (.\stm32f0xx_it.h)(0x51FA4594)()
+F (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x51FA4574)()
+F (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x51FA4575)()
+F (.\lcd_lib.h)(0x58CBA98D)()
+F (.\main.c)(0x58EBA7A7)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I..\CMSIS\Device\ST\STM32F0xx\Include -I..\keilc -I..\STM32F0xx_StdPeriph_Driver\inc-I "D:\EMBEDDED\embedded mcu\STM32\PROJECT-ST\project6\keilc\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DSTM32F030x8 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x51FA455A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0.h)(0x55094A14)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C253C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55094A14)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55094A14)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x51FA455A)
+I (..\keilc\stm32f0xx_conf.h)(0x51FA4594)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x51FA4574)
+I (lcd_lib.h)(0x58CBA98D)
+I (stm32f0xx_it.h)(0x51FA4594)
+F (.\stm32f0xx_it.c)(0x51FA4594)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I..\CMSIS\Device\ST\STM32F0xx\Include -I..\keilc -I..\STM32F0xx_StdPeriph_Driver\inc-I "D:\EMBEDDED\embedded mcu\STM32\PROJECT-ST\project6\keilc\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DSTM32F030x8 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_it.o --omf_browse .\objects\stm32f0xx_it.crf --depend .\objects\stm32f0xx_it.d)
+I (stm32f0xx_it.h)(0x51FA4594)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x51FA455A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0.h)(0x55094A14)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C253C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55094A14)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55094A14)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x51FA455A)
+I (..\keilc\stm32f0xx_conf.h)(0x51FA4594)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x51FA4574)
+F (..\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c)(0x51FA4575)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I..\CMSIS\Device\ST\STM32F0xx\Include -I..\keilc -I..\STM32F0xx_StdPeriph_Driver\inc-I "D:\EMBEDDED\embedded mcu\STM32\PROJECT-ST\project6\keilc\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DSTM32F030x8 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_gpio.o --omf_browse .\objects\stm32f0xx_gpio.crf --depend .\objects\stm32f0xx_gpio.d)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x51FA4574)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x51FA455A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0.h)(0x55094A14)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C253C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55094A14)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55094A14)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x51FA455A)
+I (..\keilc\stm32f0xx_conf.h)(0x51FA4594)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x51FA4574)
+F (..\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_i2c.c)(0x51FA4575)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I..\CMSIS\Device\ST\STM32F0xx\Include -I..\keilc -I..\STM32F0xx_StdPeriph_Driver\inc-I "D:\EMBEDDED\embedded mcu\STM32\PROJECT-ST\project6\keilc\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DSTM32F030x8 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_i2c.o --omf_browse .\objects\stm32f0xx_i2c.crf --depend .\objects\stm32f0xx_i2c.d)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x51FA4574)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x51FA455A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0.h)(0x55094A14)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C253C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55094A14)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55094A14)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x51FA455A)
+I (..\keilc\stm32f0xx_conf.h)(0x51FA4594)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x51FA4574)
+F (..\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_misc.c)(0x51FA4575)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I..\CMSIS\Device\ST\STM32F0xx\Include -I..\keilc -I..\STM32F0xx_StdPeriph_Driver\inc-I "D:\EMBEDDED\embedded mcu\STM32\PROJECT-ST\project6\keilc\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DSTM32F030x8 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_misc.o --omf_browse .\objects\stm32f0xx_misc.crf --depend .\objects\stm32f0xx_misc.d)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x51FA4574)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x51FA455A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0.h)(0x55094A14)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C253C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55094A14)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55094A14)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x51FA455A)
+I (..\keilc\stm32f0xx_conf.h)(0x51FA4594)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x51FA4575)
+F (..\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c)(0x51FA4575)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I..\CMSIS\Device\ST\STM32F0xx\Include -I..\keilc -I..\STM32F0xx_StdPeriph_Driver\inc-I "D:\EMBEDDED\embedded mcu\STM32\PROJECT-ST\project6\keilc\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DSTM32F030x8 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_rcc.o --omf_browse .\objects\stm32f0xx_rcc.crf --depend .\objects\stm32f0xx_rcc.d)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x51FA4574)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x51FA455A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0.h)(0x55094A14)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C253C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55094A14)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55094A14)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x51FA455A)
+I (..\keilc\stm32f0xx_conf.h)(0x51FA4594)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x51FA4574)
+F (..\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_tim.c)(0x51FA4576)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I..\CMSIS\Device\ST\STM32F0xx\Include -I..\keilc -I..\STM32F0xx_StdPeriph_Driver\inc-I "D:\EMBEDDED\embedded mcu\STM32\PROJECT-ST\project6\keilc\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DSTM32F030x8 -DUSE_STDPERIPH_DRIVER -DSTM32F0XX-o .\objects\stm32f0xx_tim.o --omf_browse .\objects\stm32f0xx_tim.crf --depend .\objects\stm32f0xx_tim.d)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x51FA4575)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x51FA455A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0.h)(0x55094A14)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C253C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55094A14)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55094A14)
+I (..\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x51FA455A)
+I (..\keilc\stm32f0xx_conf.h)(0x51FA4594)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x51FA4574)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x51FA4575)
+I (..\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x51FA4574)
+F (..\CMSIS\Device\ST\STM32F0xx\Source\Templates\arm\startup_stm32f0xx_ld.s)(0x51FA455A)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I "D:\EMBEDDED\embedded mcu\STM32\PROJECT-ST\project6\keilc\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include--pd "__UVISION_VERSION SETA 515" --pd "_RTE_ SETA 1" --pd "STM32F030x8 SETA 1"--list .\listings\startup_stm32f0xx_ld.lst --xref -o .\objects\startup_stm32f0xx_ld.o --depend .\objects\startup_stm32f0xx_ld.d)
